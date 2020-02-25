@@ -1,5 +1,4 @@
-# T-Rex Game in Verilog
-### chrome://dino
+# Untitled
 ## Modules
 
 #### VGA
