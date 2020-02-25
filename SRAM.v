@@ -25,6 +25,4 @@ module SRAM #(parameter ADDR_W = 8, DATA_W = 8, DEPTH = 256, MEMFILE="")
 
    assign DATA_OUT = DataReg;
 
-endmodule // SRAM
-
-	    
+endmodule // SRAM 
