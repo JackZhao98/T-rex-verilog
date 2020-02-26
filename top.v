@@ -42,46 +42,6 @@ module top_vga(
    // SRAM buffer
    localparam DISPLAY_WIDTH = 640;
    localparam DISPLAY_HEIGHT = 480;
-   localparam COLOR_BIT = 8;
-   
-   localparam VRAM_DEPTH = DISPLAY_WIDTH * DISPLAY_HEIGHT;
-   localparam VRAM_ADDR_WIDTH = 18;
-   localparam VRAM_DATA_WIDTH = COLOR_BIT;
-   
-   reg [VRAM_ADDR_WIDTH - 1:0] 	 address;
-   wire [VRAM_DATA_WIDTH - 1:0]  pixelData;
-
-   SRAM #(.ADDR_W(VRAM_ADDR_WIDTH),
-	  .DATA_W(VRAM_DATA_WIDTH),
-	  .DEPTH(VRAM_DEPTH),
-	  .MEMFILE("./assets/trex/2x-trex.mem"))
-   vram1 (
-	  .clk(clk),
-	  .ADDR(address),
-	  .MemWrite(0),
-	  .DATA(0),
-	  .DATA_OUT(pixelData));
-
-   reg [11:0] 			 palette[0:63];
-   reg [11:0] 			 color;
-   initial
-     $readmemh("./assets/trex/2x-trex_palette.mem",palette);
-
-   reg [2:0]
-   always @(posedge clk) begin
-      address <= DISPLAY_WIDTH * y + x;
-
-      if (active)
-	color <= palette[pixelData];
-
-      else
-	color <= 0;
-
-      VGA_R <=
       
       
-   
-   
-
-   
-   
+endmodule // top_vga

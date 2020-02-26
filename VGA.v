@@ -3,7 +3,7 @@ module VGA(
 	   input wire 	     pixel_clk,
 	   input wire 	     rst,
 	   output wire 	     Hsync,
-	   output wire 	     VSync,
+	   output wire 	     Vsync,
 	   output wire 	     blanking,
 	   output wire 	     active,
 	   output wire 	     screened,
@@ -62,7 +62,7 @@ module VGA(
    assign screened = ((h_count == LINE) & (v_count == SCREEN - 1));
 
    // Active: high for one tick at tha last active pixel
-   assign animate = ((h_count == LINE) & (v_counter == VA_END - 1));
+   assign animate = ((h_count == LINE) & (v_count == VA_END - 1));
 
    always @(posedge clk) begin
       if (rst) begin

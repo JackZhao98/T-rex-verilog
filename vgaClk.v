@@ -8,7 +8,7 @@ module vgaClk(
    always @(posedge clk)
      {pix_stb, counter} <= counter + 16'h4000;
 
-   assign pix_clk <= pix_stb;
+   assign pix_clk = pix_stb;
 
 endmodule // end of vgaClk
 
