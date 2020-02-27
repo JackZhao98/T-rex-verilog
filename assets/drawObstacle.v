@@ -3,23 +3,24 @@
 // Written by Zijian Zhao
 // github.com/JackZhao98
 
-module drawObstacle#(parameter ratio = 1),
-(
+module drawObstacle#(parameter ratio = 1)
+	(
 	    input wire animateClk,
 	    input wire rst,
 	    input wire [9:0] ox,
 	    input wire [8:0] oy,
 	    input wire [9:0] X,
 	    input wire [8:0] Y,
-	    input wire [2:0] select,	// Select Pattern
+	    input wire [3:0] select,	// Select Pattern
 	    output wire [11:0] objectWidth,
 	    output wire [6:0] objectHeight,
-	    output wire inHitBox,
-	    output wire inWhite,
-	    output wire inGrey);
-
+	    output reg inHitBox,
+	    output reg inWhite,
+	    output reg inGrey);
 		
-localparam px = ratio
+localparam px = ratio;
+
+
 // Auto Generated: Obstacle/SmallB
 localparam SmallBWidth = 68 * px;
 localparam SmallBHeight = 70 * px;
@@ -3488,46 +3489,49 @@ assign inWhite_LargeA = inHitBox_LargeA & ~inBlank_LargeA & ~inGrey_LargeA;
 
 // End of Auto Generate: Obstacle/LargeA
 
+always @(*) begin
 
 case(select) begin
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_SmallB;
-	assign inWhite = inWhite_SmallB;
-	assign inGrey = inGrey_SmallB;
+4'b0010: begin
+	inHitBox <= inHitBox_SmallB;
+	inWhite <= inWhite_SmallB;
+	inGrey <= inGrey_SmallB;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_SmallC;
-	assign inWhite = inWhite_SmallC;
-	assign inGrey = inGrey_SmallC;
+4'b0011: begin
+	inHitBox <= inHitBox_SmallC;
+	inWhite <= inWhite_SmallC;
+	inGrey <= inGrey_SmallC;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_SmallA;
-	assign inWhite = inWhite_SmallA;
-	assign inGrey = inGrey_SmallA;
+4'b0001: begin
+	inHitBox <= inHitBox_SmallA;
+	inWhite <= inWhite_SmallA;
+	inGrey <= inGrey_SmallA;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_LargeB;
-	assign inWhite = inWhite_LargeB;
-	assign inGrey = inGrey_LargeB;
+4'b1010: begin
+	inHitBox <= inHitBox_LargeB;
+	inWhite <= inWhite_LargeB;
+	inGrey <= inGrey_LargeB;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_LargeC;
-	assign inWhite = inWhite_LargeC;
-	assign inGrey = inGrey_LargeC;
+4'b1011: begin
+	inHitBox <= inHitBox_LargeC;
+	inWhite <= inWhite_LargeC;
+	inGrey <= inGrey_LargeC;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_LargeA;
-	assign inWhite = inWhite_LargeA;
-	assign inGrey = inGrey_LargeA;
+4'b1001: begin
+	inHitBox <= inHitBox_LargeA;
+	inWhite <= inWhite_LargeA;
+	inGrey <= inGrey_LargeA;
 end
 
 
 endcase
+
+end // end of always @(*)
 
 /* Enter Selector Code here */
 

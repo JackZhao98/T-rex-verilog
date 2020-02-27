@@ -3,23 +3,24 @@
 // Written by Zijian Zhao
 // github.com/JackZhao98
 
-module drawBird#(parameter ratio = 1),
-(
+module drawBird#(parameter ratio = 1)
+	(
 	    input wire animateClk,
 	    input wire rst,
 	    input wire [9:0] ox,
 	    input wire [8:0] oy,
 	    input wire [9:0] X,
 	    input wire [8:0] Y,
-	    input wire [2:0] select,	// Select Pattern
+	    input wire [3:0] select,	// Select Pattern
 	    output wire [11:0] objectWidth,
 	    output wire [6:0] objectHeight,
-	    output wire inHitBox,
-	    output wire inWhite,
-	    output wire inGrey);
-
+	    output reg inHitBox,
+	    output reg inWhite,
+	    output reg inGrey);
 		
-localparam px = ratio
+localparam px = ratio;
+
+
 // Auto Generated: Bird/BirdDown
 localparam BirdDownWidth = 92 * px;
 localparam BirdDownHeight = 80 * px;
@@ -420,22 +421,25 @@ assign inWhite_BirdUp = inHitBox_BirdUp & ~inBlank_BirdUp & ~inGrey_BirdUp;
 
 // End of Auto Generate: Bird/BirdUp
 
+always @(*) begin
 
 case(select) begin
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_BirdDown;
-	assign inWhite = inWhite_BirdDown;
-	assign inGrey = inGrey_BirdDown;
+4'b0000: begin
+	inHitBox <= inHitBox_BirdDown;
+	inWhite <= inWhite_BirdDown;
+	inGrey <= inGrey_BirdDown;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_BirdUp;
-	assign inWhite = inWhite_BirdUp;
-	assign inGrey = inGrey_BirdUp;
+4'b0001: begin
+	inHitBox <= inHitBox_BirdUp;
+	inWhite <= inWhite_BirdUp;
+	inGrey <= inGrey_BirdUp;
 end
 
 
 endcase
+
+end // end of always @(*)
 
 /* Enter Selector Code here */
 

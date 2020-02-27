@@ -3,23 +3,24 @@
 // Written by Zijian Zhao
 // github.com/JackZhao98
 
-module drawDino#(parameter ratio = 1),
-(
+module drawDino#(parameter ratio = 1)
+	(
 	    input wire animateClk,
 	    input wire rst,
 	    input wire [9:0] ox,
 	    input wire [8:0] oy,
 	    input wire [9:0] X,
 	    input wire [8:0] Y,
-	    input wire [2:0] select,	// Select Pattern
+	    input wire [3:0] select,	// Select Pattern
 	    output wire [11:0] objectWidth,
 	    output wire [6:0] objectHeight,
-	    output wire inHitBox,
-	    output wire inWhite,
-	    output wire inGrey);
-
+	    output reg inHitBox,
+	    output reg inWhite,
+	    output reg inGrey);
 		
-localparam px = ratio
+localparam px = ratio;
+
+
 // Auto Generated: Dino/duckRight
 localparam duckRightWidth = 118 * px;
 localparam duckRightHeight = 60 * px;
@@ -1650,46 +1651,49 @@ assign inWhite_duckLeft = inHitBox_duckLeft & ~inBlank_duckLeft & ~inGrey_duckLe
 
 // End of Auto Generate: Dino/duckLeft
 
+always @(*) begin
 
 case(select) begin
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_duckRight;
-	assign inWhite = inWhite_duckRight;
-	assign inGrey = inGrey_duckRight;
+4'b1010: begin
+	inHitBox <= inHitBox_duckRight;
+	inWhite <= inWhite_duckRight;
+	inGrey <= inGrey_duckRight;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_left;
-	assign inWhite = inWhite_left;
-	assign inGrey = inGrey_left;
+4'b0001: begin
+	inHitBox <= inHitBox_left;
+	inWhite <= inWhite_left;
+	inGrey <= inGrey_left;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_dead;
-	assign inWhite = inWhite_dead;
-	assign inGrey = inGrey_dead;
+4'b0011: begin
+	inHitBox <= inHitBox_dead;
+	inWhite <= inWhite_dead;
+	inGrey <= inGrey_dead;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_default;
-	assign inWhite = inWhite_default;
-	assign inGrey = inGrey_default;
+4'b0000: begin
+	inHitBox <= inHitBox_default;
+	inWhite <= inWhite_default;
+	inGrey <= inGrey_default;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_right;
-	assign inWhite = inWhite_right;
-	assign inGrey = inGrey_right;
+4'b0010: begin
+	inHitBox <= inHitBox_right;
+	inWhite <= inWhite_right;
+	inGrey <= inGrey_right;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_duckLeft;
-	assign inWhite = inWhite_duckLeft;
-	assign inGrey = inGrey_duckLeft;
+4'b1001: begin
+	inHitBox <= inHitBox_duckLeft;
+	inWhite <= inWhite_duckLeft;
+	inGrey <= inGrey_duckLeft;
 end
 
 
 endcase
+
+end // end of always @(*)
 
 /* Enter Selector Code here */
 

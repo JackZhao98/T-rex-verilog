@@ -3,23 +3,24 @@
 // Written by Zijian Zhao
 // github.com/JackZhao98
 
-module drawNumber#(parameter ratio = 1),
-(
+module drawNumber#(parameter ratio = 1)
+	(
 	    input wire animateClk,
 	    input wire rst,
 	    input wire [9:0] ox,
 	    input wire [8:0] oy,
 	    input wire [9:0] X,
 	    input wire [8:0] Y,
-	    input wire [2:0] select,	// Select Pattern
+	    input wire [3:0] select,	// Select Pattern
 	    output wire [11:0] objectWidth,
 	    output wire [6:0] objectHeight,
-	    output wire inHitBox,
-	    output wire inWhite,
-	    output wire inGrey);
-
+	    output reg inHitBox,
+	    output reg inWhite,
+	    output reg inGrey);
 		
-localparam px = ratio
+localparam px = ratio;
+
+
 // Auto Generated: Number/three
 localparam threeWidth = 20 * px;
 localparam threeHeight = 21 * px;
@@ -457,70 +458,73 @@ assign inWhite_nine = inHitBox_nine & ~inBlank_nine & ~inGrey_nine;
 
 // End of Auto Generate: Number/nine
 
+always @(*) begin
 
 case(select) begin
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_three;
-	assign inWhite = inWhite_three;
-	assign inGrey = inGrey_three;
+4'b0011: begin
+	inHitBox <= inHitBox_three;
+	inWhite <= inWhite_three;
+	inGrey <= inGrey_three;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_six;
-	assign inWhite = inWhite_six;
-	assign inGrey = inGrey_six;
+4'b0110: begin
+	inHitBox <= inHitBox_six;
+	inWhite <= inWhite_six;
+	inGrey <= inGrey_six;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_two;
-	assign inWhite = inWhite_two;
-	assign inGrey = inGrey_two;
+4'b0010: begin
+	inHitBox <= inHitBox_two;
+	inWhite <= inWhite_two;
+	inGrey <= inGrey_two;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_four;
-	assign inWhite = inWhite_four;
-	assign inGrey = inGrey_four;
+4'b0100: begin
+	inHitBox <= inHitBox_four;
+	inWhite <= inWhite_four;
+	inGrey <= inGrey_four;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_zero;
-	assign inWhite = inWhite_zero;
-	assign inGrey = inGrey_zero;
+4'b0000: begin
+	inHitBox <= inHitBox_zero;
+	inWhite <= inWhite_zero;
+	inGrey <= inGrey_zero;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_eight;
-	assign inWhite = inWhite_eight;
-	assign inGrey = inGrey_eight;
+4'b1000: begin
+	inHitBox <= inHitBox_eight;
+	inWhite <= inWhite_eight;
+	inGrey <= inGrey_eight;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_five;
-	assign inWhite = inWhite_five;
-	assign inGrey = inGrey_five;
+4'b0101: begin
+	inHitBox <= inHitBox_five;
+	inWhite <= inWhite_five;
+	inGrey <= inGrey_five;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_one;
-	assign inWhite = inWhite_one;
-	assign inGrey = inGrey_one;
+4'b0001: begin
+	inHitBox <= inHitBox_one;
+	inWhite <= inWhite_one;
+	inGrey <= inGrey_one;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_seven;
-	assign inWhite = inWhite_seven;
-	assign inGrey = inGrey_seven;
+4'b0111: begin
+	inHitBox <= inHitBox_seven;
+	inWhite <= inWhite_seven;
+	inGrey <= inGrey_seven;
 end
 
-3'b/*SEL*/ : begin
-	assign inHitBox = inHitBox_nine;
-	assign inWhite = inWhite_nine;
-	assign inGrey = inGrey_nine;
+4'b1001: begin
+	inHitBox <= inHitBox_nine;
+	inWhite <= inWhite_nine;
+	inGrey <= inGrey_nine;
 end
 
 
 endcase
+
+end // end of always @(*)
 
 /* Enter Selector Code here */
 
