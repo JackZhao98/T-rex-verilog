@@ -32,187 +32,187 @@ wire inWhite_duckRight;
 assign inHitBox_duckRight = (X > ox) && (X <= duckRightWidth) && (Y > oy) && (Y <= duckRightHeight);
 
 assign inBlank_duckRight = 
-     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 57 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 57 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px);
+     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 57 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 57 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 117 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px);
 	// Total 192 lines.
 
 assign inGrey_duckRight = 
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px);
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 37 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 55 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px);
 	// Total 164 lines.
 
 assign inWhite_duckRight = inHitBox_duckRight & ~inBlank_duckRight & ~inGrey_duckRight;
@@ -230,285 +230,285 @@ wire inWhite_left;
 assign inHitBox_left = (X > ox) && (X <= leftWidth) && (Y > oy) && (Y <= leftHeight);
 
 assign inBlank_left = 
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px);
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox) && (X <= ox + 23 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px);
 	// Total 316 lines.
 
 assign inGrey_left = 
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px);
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 35 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px);
 	// Total 236 lines.
 
 assign inWhite_left = inHitBox_left & ~inBlank_left & ~inGrey_left;
@@ -526,313 +526,313 @@ wire inWhite_dead;
 assign inHitBox_dead = (X > ox) && (X <= deadWidth) && (Y > oy) && (Y <= deadHeight);
 
 assign inBlank_dead = 
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px);
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px);
 	// Total 340 lines.
 
 assign inGrey_dead = 
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px);
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px);
 	// Total 268 lines.
 
 assign inWhite_dead = inHitBox_dead & ~inBlank_dead & ~inGrey_dead;
@@ -850,305 +850,305 @@ wire inWhite_default;
 assign inHitBox_default = (X > ox) && (X <= defaultWidth) && (Y > oy) && (Y <= defaultHeight);
 
 assign inBlank_default = 
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px);
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 39 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 52 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px);
 	// Total 340 lines.
 
 assign inGrey_default = 
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px);
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 47 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 47 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px);
 	// Total 252 lines.
 
 assign inWhite_default = inHitBox_default & ~inBlank_default & ~inGrey_default;
@@ -1166,281 +1166,281 @@ wire inWhite_right;
 assign inHitBox_right = (X > ox) && (X <= rightWidth) && (Y > oy) && (Y <= rightHeight);
 
 assign inBlank_right = 
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 90 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 91 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 92 * px) ||
-     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px) ||
-     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 93 * px);
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox) && (X <= ox + 43 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 84 * px) && (X <= ox + 87 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox) && (X <= ox + 39 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 35 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 29 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 80 * px) && (X <= ox + 87 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 23 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 72 * px) && (X <= ox + 87 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 87 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 60 * px) && (X <= ox + 87 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 87 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 87 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 39 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 58 * px) && (X <= ox + 87 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 87 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 90 * px) && (Y <= oy + 91 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 91 * px) && (Y <= oy + 92 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 92 * px) && (Y <= oy + 93 * px) ||
+     (X > ox) && (X <= ox + 19 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px) ||
+     (X > ox + 36 * px) && (X <= ox + 87 * px) && (Y > oy + 93 * px) && (Y <= oy + 94 * px);
 	// Total 316 lines.
 
 assign inGrey_right = 
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 60 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 61 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 62 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 63 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 64 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 65 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 66 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 67 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 68 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 69 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 70 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 71 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 72 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 73 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 74 * px) && (Y <= oy + 74 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 75 * px) && (Y <= oy + 75 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 76 * px) && (Y <= oy + 76 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 77 * px) && (Y <= oy + 77 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 78 * px) && (Y <= oy + 78 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 79 * px) && (Y <= oy + 79 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 80 * px) && (Y <= oy + 80 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 81 * px) && (Y <= oy + 81 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 82 * px) && (Y <= oy + 82 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 83 * px) && (Y <= oy + 83 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 84 * px) && (Y <= oy + 84 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 85 * px) && (Y <= oy + 85 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 86 * px) && (Y <= oy + 86 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 87 * px) && (Y <= oy + 87 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 88 * px) && (Y <= oy + 88 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 89 * px) && (Y <= oy + 89 * px);
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 48 * px) && (X <= ox + 79 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 51 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 56 * px) && (X <= ox + 83 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 83 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 63 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 75 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 40 * px) && (X <= ox + 59 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 34 * px) && (X <= ox + 59 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 11 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 67 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 59 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 64 * px) && (X <= ox + 67 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 59 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 59 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 60 * px) && (Y <= oy + 61 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 55 * px) && (Y > oy + 61 * px) && (Y <= oy + 62 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 62 * px) && (Y <= oy + 63 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 63 * px) && (Y <= oy + 64 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 64 * px) && (Y <= oy + 65 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 55 * px) && (Y > oy + 65 * px) && (Y <= oy + 66 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 66 * px) && (Y <= oy + 67 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 67 * px) && (Y <= oy + 68 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 68 * px) && (Y <= oy + 69 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 51 * px) && (Y > oy + 69 * px) && (Y <= oy + 70 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 70 * px) && (Y <= oy + 71 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 71 * px) && (Y <= oy + 72 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 72 * px) && (Y <= oy + 73 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 47 * px) && (Y > oy + 73 * px) && (Y <= oy + 74 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 74 * px) && (Y <= oy + 75 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 75 * px) && (Y <= oy + 76 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 76 * px) && (Y <= oy + 77 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 35 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 44 * px) && (X <= ox + 53 * px) && (Y > oy + 77 * px) && (Y <= oy + 78 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 78 * px) && (Y <= oy + 79 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 79 * px) && (Y <= oy + 80 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 80 * px) && (Y <= oy + 81 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 81 * px) && (Y <= oy + 82 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 82 * px) && (Y <= oy + 83 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 83 * px) && (Y <= oy + 84 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 84 * px) && (Y <= oy + 85 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 27 * px) && (Y > oy + 85 * px) && (Y <= oy + 86 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 86 * px) && (Y <= oy + 87 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 87 * px) && (Y <= oy + 88 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 88 * px) && (Y <= oy + 89 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 31 * px) && (Y > oy + 89 * px) && (Y <= oy + 90 * px);
 	// Total 228 lines.
 
 assign inWhite_right = inHitBox_right & ~inBlank_right & ~inGrey_right;
@@ -1458,193 +1458,193 @@ wire inWhite_duckLeft;
 assign inHitBox_duckLeft = (X > ox) && (X <= duckLeftWidth) && (Y > oy) && (Y <= duckLeftHeight);
 
 assign inBlank_duckLeft = 
-     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy) && (Y <= oy) ||
-     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy + 1 * px) && (Y <= oy + 1 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 2 * px) && (Y <= oy + 2 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 3 * px) && (Y <= oy + 3 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 57 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 57 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 117 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 46 * px) && (X <= ox + 117 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 56 * px) && (Y <= oy + 56 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 57 * px) && (Y <= oy + 57 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 58 * px) && (Y <= oy + 58 * px) ||
-     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px) ||
-     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 59 * px) && (Y <= oy + 59 * px);
+     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy) && (Y <= oy + 1 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 117 * px) && (Y > oy + 1 * px) && (Y <= oy + 2 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 2 * px) && (Y <= oy + 3 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 73 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 3 * px) && (Y <= oy + 4 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 70 * px) && (X <= ox + 73 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 27 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 82 * px) && (X <= ox + 85 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox) && (X <= ox + 3 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox) && (X <= ox + 7 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox) && (X <= ox + 11 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox) && (X <= ox + 15 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 114 * px) && (X <= ox + 117 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 77 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 110 * px) && (X <= ox + 117 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 54 * px) && (X <= ox + 57 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox) && (X <= ox + 17 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 117 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 57 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 57 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 57 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 117 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 117 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox) && (X <= ox + 21 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 46 * px) && (X <= ox + 117 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 56 * px) && (Y <= oy + 57 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 57 * px) && (Y <= oy + 58 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 58 * px) && (Y <= oy + 59 * px) ||
+     (X > ox) && (X <= ox + 33 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px) ||
+     (X > ox + 50 * px) && (X <= ox + 117 * px) && (Y > oy + 59 * px) && (Y <= oy + 60 * px);
 	// Total 196 lines.
 
 assign inGrey_duckLeft = 
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 4 * px) && (Y <= oy + 4 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 5 * px) && (Y <= oy + 5 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 6 * px) && (Y <= oy + 6 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 7 * px) && (Y <= oy + 7 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 8 * px) && (Y <= oy + 8 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 9 * px) && (Y <= oy + 9 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 10 * px) && (Y <= oy + 10 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 11 * px) && (Y <= oy + 11 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 12 * px) && (Y <= oy + 12 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 13 * px) && (Y <= oy + 13 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 14 * px) && (Y <= oy + 14 * px) ||
-     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 15 * px) && (Y <= oy + 15 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 16 * px) && (Y <= oy + 16 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 17 * px) && (Y <= oy + 17 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 18 * px) && (Y <= oy + 18 * px) ||
-     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 19 * px) && (Y <= oy + 19 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 20 * px) && (Y <= oy + 20 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 21 * px) && (Y <= oy + 21 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 22 * px) && (Y <= oy + 22 * px) ||
-     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 23 * px) && (Y <= oy + 23 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 24 * px) && (Y <= oy + 24 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 25 * px) && (Y <= oy + 25 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 26 * px) && (Y <= oy + 26 * px) ||
-     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 27 * px) && (Y <= oy + 27 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 28 * px) && (Y <= oy + 28 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 29 * px) && (Y <= oy + 29 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 30 * px) && (Y <= oy + 30 * px) ||
-     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 31 * px) && (Y <= oy + 31 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 32 * px) && (Y <= oy + 32 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 33 * px) && (Y <= oy + 33 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 34 * px) && (Y <= oy + 34 * px) ||
-     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 35 * px) && (Y <= oy + 35 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 36 * px) && (Y <= oy + 36 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 37 * px) && (Y <= oy + 37 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 38 * px) && (Y <= oy + 38 * px) ||
-     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 39 * px) && (Y <= oy + 39 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 40 * px) && (Y <= oy + 40 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 41 * px) && (Y <= oy + 41 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 42 * px) && (Y <= oy + 42 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 43 * px) && (Y <= oy + 43 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 44 * px) && (Y <= oy + 44 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 45 * px) && (Y <= oy + 45 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 46 * px) && (Y <= oy + 46 * px) ||
-     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 47 * px) && (Y <= oy + 47 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 48 * px) && (Y <= oy + 48 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 49 * px) && (Y <= oy + 49 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 50 * px) && (Y <= oy + 50 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 51 * px) && (Y <= oy + 51 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 52 * px) && (Y <= oy + 52 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 53 * px) && (Y <= oy + 53 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 54 * px) && (Y <= oy + 54 * px) ||
-     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 55 * px) && (Y <= oy + 55 * px);
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 4 * px) && (Y <= oy + 5 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 5 * px) && (Y <= oy + 6 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 6 * px) && (Y <= oy + 7 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 7 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 7 * px) && (Y <= oy + 8 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 8 * px) && (Y <= oy + 9 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 109 * px) && (Y > oy + 9 * px) && (Y <= oy + 10 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 10 * px) && (Y <= oy + 11 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 15 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 32 * px) && (X <= ox + 65 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 74 * px) && (X <= ox + 113 * px) && (Y > oy + 11 * px) && (Y <= oy + 12 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 12 * px) && (Y <= oy + 13 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 13 * px) && (Y <= oy + 14 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 14 * px) && (Y <= oy + 15 * px) ||
+     (X > ox + 4 * px) && (X <= ox + 81 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 86 * px) && (X <= ox + 113 * px) && (Y > oy + 15 * px) && (Y <= oy + 16 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 16 * px) && (Y <= oy + 17 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 17 * px) && (Y <= oy + 18 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 18 * px) && (Y <= oy + 19 * px) ||
+     (X > ox + 8 * px) && (X <= ox + 113 * px) && (Y > oy + 19 * px) && (Y <= oy + 20 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 20 * px) && (Y <= oy + 21 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 21 * px) && (Y <= oy + 22 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 22 * px) && (Y <= oy + 23 * px) ||
+     (X > ox + 12 * px) && (X <= ox + 113 * px) && (Y > oy + 23 * px) && (Y <= oy + 24 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 24 * px) && (Y <= oy + 25 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 25 * px) && (Y <= oy + 26 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 26 * px) && (Y <= oy + 27 * px) ||
+     (X > ox + 16 * px) && (X <= ox + 113 * px) && (Y > oy + 27 * px) && (Y <= oy + 28 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 28 * px) && (Y <= oy + 29 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 29 * px) && (Y <= oy + 30 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 30 * px) && (Y <= oy + 31 * px) ||
+     (X > ox + 20 * px) && (X <= ox + 93 * px) && (Y > oy + 31 * px) && (Y <= oy + 32 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 32 * px) && (Y <= oy + 33 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 33 * px) && (Y <= oy + 34 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 34 * px) && (Y <= oy + 35 * px) ||
+     (X > ox + 24 * px) && (X <= ox + 69 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 78 * px) && (X <= ox + 105 * px) && (Y > oy + 35 * px) && (Y <= oy + 36 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 36 * px) && (Y <= oy + 37 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 69 * px) && (Y > oy + 37 * px) && (Y <= oy + 38 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 38 * px) && (Y <= oy + 39 * px) ||
+     (X > ox + 28 * px) && (X <= ox + 51 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 39 * px) && (Y <= oy + 40 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 40 * px) && (Y <= oy + 41 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 65 * px) && (Y > oy + 41 * px) && (Y <= oy + 42 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 42 * px) && (Y <= oy + 43 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 29 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 49 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 43 * px) && (Y <= oy + 44 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 44 * px) && (Y <= oy + 45 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 62 * px) && (X <= ox + 69 * px) && (Y > oy + 45 * px) && (Y <= oy + 46 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 46 * px) && (Y <= oy + 47 * px) ||
+     (X > ox + 26 * px) && (X <= ox + 33 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 47 * px) && (Y <= oy + 48 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 48 * px) && (Y <= oy + 49 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 49 * px) && (Y <= oy + 50 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 50 * px) && (Y <= oy + 51 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 41 * px) && (Y > oy + 51 * px) && (Y <= oy + 52 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 52 * px) && (Y <= oy + 53 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 53 * px) && (Y <= oy + 54 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 54 * px) && (Y <= oy + 55 * px) ||
+     (X > ox + 38 * px) && (X <= ox + 45 * px) && (Y > oy + 55 * px) && (Y <= oy + 56 * px);
 	// Total 172 lines.
 
 assign inWhite_duckLeft = inHitBox_duckLeft & ~inBlank_duckLeft & ~inGrey_duckLeft;
@@ -1655,39 +1655,39 @@ always @(*) begin
 
 case(select) begin
 4'b1010: begin
-	inHitBox <= inHitBox_duckRight;
-	inWhite <= inWhite_duckRight;
-	inGrey <= inGrey_duckRight;
+     inHitBox <= inHitBox_duckRight;
+     inWhite <= inWhite_duckRight;
+     inGrey <= inGrey_duckRight;
 end
 
 4'b0001: begin
-	inHitBox <= inHitBox_left;
-	inWhite <= inWhite_left;
-	inGrey <= inGrey_left;
+     inHitBox <= inHitBox_left;
+     inWhite <= inWhite_left;
+     inGrey <= inGrey_left;
 end
 
 4'b0011: begin
-	inHitBox <= inHitBox_dead;
-	inWhite <= inWhite_dead;
-	inGrey <= inGrey_dead;
+     inHitBox <= inHitBox_dead;
+     inWhite <= inWhite_dead;
+     inGrey <= inGrey_dead;
 end
 
 4'b0000: begin
-	inHitBox <= inHitBox_default;
-	inWhite <= inWhite_default;
-	inGrey <= inGrey_default;
+     inHitBox <= inHitBox_default;
+     inWhite <= inWhite_default;
+     inGrey <= inGrey_default;
 end
 
 4'b0010: begin
-	inHitBox <= inHitBox_right;
-	inWhite <= inWhite_right;
-	inGrey <= inGrey_right;
+     inHitBox <= inHitBox_right;
+     inWhite <= inWhite_right;
+     inGrey <= inGrey_right;
 end
 
 4'b1001: begin
-	inHitBox <= inHitBox_duckLeft;
-	inWhite <= inWhite_duckLeft;
-	inGrey <= inGrey_duckLeft;
+     inHitBox <= inHitBox_duckLeft;
+     inWhite <= inWhite_duckLeft;
+     inGrey <= inGrey_duckLeft;
 end
 
 
