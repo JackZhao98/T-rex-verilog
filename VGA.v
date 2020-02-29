@@ -1,4 +1,87 @@
 module VGA(
+  input wire dclk,    //pixel clock: 25MHz
+  input wire clr,     //asynchronous reset
+  output wire hsync,    //horizontal sync out
+  output wire vsync,    //vertical sync out
+    output wire [31:0]X,
+    output wire [31:0]Y
+  );
+
+   /**********************
+    *                    *
+    * 4                  *
+    * 8                  *
+    * 0                  *
+    *        640         *
+    * ********************/
+// video structure constants
+parameter hpixels = 800;// horizontal pixels per line
+parameter vlines = 521; // vertical lines per frame
+parameter hpulse = 96;  // hsync pulse length
+parameter vpulse = 2;   // vsync pulse length
+parameter hbp = 144;  // end of horizontal back porch
+parameter hfp = 784;  // beginning of horizontal front porch
+parameter vbp = 31;     // end of vertical back porch
+parameter vfp = 511;  // beginning of vertical front porch
+// active horizontal video is therefore: 784 - 144 = 640
+// active vertical video is therefore: 511 - 31 = 480
+
+// graphic parameter (top-left is (0, 0))
+assign screen_width = hfp - hbp;
+assign screen_height = vfp - vbp;
+
+// registers for storing the horizontal & vertical counters
+reg [9:0] hc;
+reg [9:0] vc;
+
+// Horizontal & vertical counters --
+// this is how we keep track of where we are on the screen.
+// ------------------------
+// Sequential "always block", which is a block that is
+// only triggered on signal transitions or "edges".
+// posedge = rising edge  &  negedge = falling edge
+// Assignment statements can only be used on type "reg" and need to be of the "non-blocking" type: <=
+
+always @(posedge dclk or posedge clr)
+begin
+  // reset condition
+  if (clr == 1)
+  begin
+    hc <= 0;
+    vc <= 0;
+  end
+  else
+  begin
+    // keep counting until the end of the line
+    if (hc < hpixels - 1)
+      hc <= hc + 1;
+    else
+    // When we hit the end of the line, reset the horizontal
+    // counter and increment the vertical counter.
+    // If vertical counter is at the end of the frame, then
+    // reset that one too.
+    begin
+      hc <= 0;
+      if (vc < vlines - 1)
+        vc <= vc + 1;
+      else
+        vc <= 0;
+    end
+    
+  end
+end
+
+assign hsync = (hc < hpulse) ? 0:1;
+assign vsync = (vc < vpulse) ? 0:1;
+
+assign X = (hc >= hbp)? (hc-hbp):0;
+assign Y = (vc >= vbp)? (vc -vbp):0;
+
+endmodule
+
+
+/* Archived
+module VGA(
 	   input wire 	     clk,
 	   input wire 	     pixel_clk,
 	   input wire 	     rst,
@@ -66,20 +149,20 @@ module VGA(
 
    always @(posedge clk) begin
       if (rst) begin
-	 h_count <= 0;
-	 v_count <= 0;
+         h_count <= 0;
+         v_count <= 0;
       end
 
       if (pixel_clk) begin
-	 if (h_count == LINE) begin
-	    h_count <= 0;
-	    v_count <= v_count + 1;
-	 end
-	 else
-	   h_count <= h_count + 1;
+         if (h_count == LINE) begin
+            h_count <= 0;
+            v_count <= v_count + 1;
+         end
+         else
+           h_count <= h_count + 1;
 
-	 if (v_count == SCREEN)
-	   v_count <= 0;
+         if (v_count == SCREEN)
+            v_count <= 0;
       end // if (pixel_clk)
 
    end // always @ (posedge clk)
@@ -87,3 +170,4 @@ module VGA(
 endmodule // VGA
 
 // Reference: https://timetoexplore.net/blog/arty-fpga-vga-verilog-01
+*/
