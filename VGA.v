@@ -13,7 +13,7 @@ module VGA(
     * 8                  *
     * 0                  *
     *        640         *
-    * *******************
+    * *******************/
 // video structure constants
 parameter hpixels = 800;// horizontal pixels per line
 parameter vlines = 521; // vertical lines per frame
@@ -102,7 +102,7 @@ module VGA(
     * 8                  *
     * 0                  *
     *        640         *
-    * ********************/
+    * ********************
    localparam H_Front_Porch = 16;
    localparam H_Sync_Pulse = 96;
    localparam H_Back_Porch = 48;
