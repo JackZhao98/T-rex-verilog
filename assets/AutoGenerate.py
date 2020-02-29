@@ -1,4 +1,4 @@
-#!/Users/jackzhao/opt/anaconda3/bin/python3
+#!/usr/bin/python3
 import sys
 import os
 from PIL import Image
@@ -196,7 +196,7 @@ def moduleSel(basePath):
 					print('\tobjectHeight <= ' + name + "Height;")
 					print('end // end of case: Case: ' + name + '\n')
 
-		print("\nendcase\n\nend\t// end of always @(*)\n")
+		print("\nendcase\nend\t// end of always @(*)\n")
 
 
 def moduleEnd(moduleName):
@@ -230,13 +230,9 @@ def main():
 					Analyzer(basePath + entry.name, 0)
 					Analyzer(basePath + entry.name, 2)
 				AnalyzerEnd(basePath + entry.name)		# Some last minute assignments
-	try:
-		moduleSel(basePath)								# Generate selection block.
-	except Exception as e:
-		print("/* Enter Selection Code Here */\n")		# Expect no selection preset files found
-		raise e
-	finally:
-		moduleEnd(moduleName)
+
+	moduleSel(basePath)							# Generate selection block.
+	moduleEnd(moduleName)
 
 
 if __name__ == "__main__":
