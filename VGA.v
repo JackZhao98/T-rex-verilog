@@ -1,11 +1,11 @@
 module VGA(
-  input wire dclk,    //pixel clock: 25MHz
-  input wire clr,     //asynchronous reset
-  output wire hsync,    //horizontal sync out
-  output wire vsync,    //vertical sync out
-    output wire [31:0]X,
-    output wire [31:0]Y
-  );
+	   input wire 	      pixel_clock, //pixel clock: 25MHz
+	   input wire 	      rst,   //asynchronous reset
+	   output wire 	      Hsync, //horizontal sync out
+	   output wire 	      Vsync, //vertical sync out
+	   output wire [31:0] X,     // X counter coordinate
+	   output wire [31:0] Y      // Y counter Coordinate
+     );                        
 
    /**********************
     *                    *
@@ -17,8 +17,8 @@ module VGA(
 // video structure constants
 parameter hpixels = 800;// horizontal pixels per line
 parameter vlines = 521; // vertical lines per frame
-parameter hpulse = 96;  // hsync pulse length
-parameter vpulse = 2;   // vsync pulse length
+parameter hpulse = 96;  // Hsync pulse length
+parameter vpulse = 2;   // Vsync pulse length
 parameter hbp = 144;  // end of horizontal back porch
 parameter hfp = 784;  // beginning of horizontal front porch
 parameter vbp = 31;     // end of vertical back porch
@@ -42,10 +42,10 @@ reg [9:0] vc;
 // posedge = rising edge  &  negedge = falling edge
 // Assignment statements can only be used on type "reg" and need to be of the "non-blocking" type: <=
 
-always @(posedge dclk or posedge clr)
+always @(posedge pixel_clock or posedge rst)
 begin
   // reset condition
-  if (clr == 1)
+  if (rst == 1)
   begin
     hc <= 0;
     vc <= 0;
@@ -71,8 +71,8 @@ begin
   end
 end
 
-assign hsync = (hc < hpulse) ? 0:1;
-assign vsync = (vc < vpulse) ? 0:1;
+assign Hsync = (hc < hpulse) ? 0:1;
+assign Vsync = (vc < vpulse) ? 0:1;
 
 assign X = (hc >= hbp)? (hc-hbp):0;
 assign Y = (vc >= vbp)? (vc -vbp):0;
