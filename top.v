@@ -30,6 +30,7 @@ module top_vga(
    wire 			 active;
 
     
+   
     vga640x480 vga(
         .dclk(pixel_clk),
         .clr(rst),
