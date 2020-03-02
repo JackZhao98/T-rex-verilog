@@ -117,32 +117,32 @@ module top_vga(
    
    drawBackGround #(.ratio(ratio))
       horizon1 (.rst(rst),
-            		.ox(Ground_1_X),
-            		.oy(GroundY),
-            		.X(x),
-            		.Y(y),
-            		.select(horizonSEL),
-            		.objectWidth(GroundW),
-            		.objectHeight(GroundH),
-            		.inGrey(Ground_1_inGrey));
+                .ox(Ground_1_X),
+                .oy(GroundY),
+                .X(x),
+                .Y(y),
+                .select(horizonSEL),
+                .objectWidth(GroundW),
+                .objectHeight(GroundH),
+                .inGrey(Ground_1_inGrey));
 
    drawBackGround #(.ratio(ratio))
       horizon2 (.rst(rst),
-            		.ox(Ground_2_X),
-            		.oy(GroundY),
-            		.X(x),
-            		.Y(y),
-            		.select(horizonSEL),
-            		.objectWidth(GroundW),
-            		.objectHeight(GroundH),
-            		.inGrey(Ground_2_inGrey));
+                .ox(Ground_2_X),
+                .oy(GroundY),
+                .X(x),
+                .Y(y),
+                .select(horizonSEL),
+                .objectWidth(GroundW),
+                .objectHeight(GroundH),
+                .inGrey(Ground_2_inGrey));
 
    /* Horizon movement */
 		
    
    // Numbers (Score board)
-   wire [31:0] 			 Num1_x;
-   wire [31:0] 			 Num1_y;
+   wire [31:0]       Num1_x;
+   wire [31:0] 	     Num1_y;
    wire [31:0]       Num2_x;
    wire	[31:0]       Num2_y;
    wire [31:0]       Num3_x;
@@ -150,13 +150,13 @@ module top_vga(
    wire [31:0]       Num4_x;
    wire	[31:0]       Num4_y;
    
-   wire [10:0] 			 Num_H;
-   wire [10:0] 			 Num_W;
+   wire [10:0] 	     Num_H;
+   wire [10:0] 	     Num_W;
 
    assign Num_W = 20;
    assign Num_H = 21;
 
-   wire 			 Num1_inGrey;
+   wire        Num1_inGrey;
    wire	       Num2_inGrey;
    wire	       Num3_inGrey;
    wire	       Num4_inGrey;
@@ -174,7 +174,7 @@ module top_vga(
    assign Num2_y = Num3_y;
    assign Num1_y = Num2_y;
 
-   reg [3:0] 			 Num1_SEL;
+   reg [3:0]       Num1_SEL;
    reg [3:0]       Num2_SEL;
    reg [3:0]       Num3_SEL;
    reg [3:0]       Num4_SEL;
@@ -243,17 +243,17 @@ module top_vga(
    wire [3:0] 			 dinoSEL;
    
    drawDino #(.ratio(ratio))
-   dino (
-     .rst(rst),
-     .ox(DinoX),
-     .oy(DinoY),
-     .X(x),
-     .Y(y),
-     .select(dinoSEL),
-     .objectWidth(dinoW),
-     .objectHeight(dinoH),
-     .inWhite(dino_inWhite),
-     .inGrey(dino_inGrey));
+     dino (
+       .rst(rst),
+       .ox(DinoX),
+       .oy(DinoY),
+       .X(x),
+       .Y(y),
+       .select(dinoSEL),
+       .objectWidth(dinoW),
+       .objectHeight(dinoH),
+       .inWhite(dino_inWhite),
+       .inGrey(dino_inGrey));
    
    /*
       Dino Movement
