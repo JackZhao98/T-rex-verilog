@@ -24,7 +24,7 @@ module ClockDivider#(parameter velocity = 1)
     
     reg [31:0] counter;
     reg clock;
-    localparam threashold = 1000000 / velocity;
+    localparam threashold = 50000000 / velocity;
     
     initial begin
         counter <= 0;
