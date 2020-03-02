@@ -1,6 +1,8 @@
 module top_vga(
 	       input wire 	 clk,
 	       input wire 	 btnR, // Reset button
+	       input wire 	 duckButton,
+	       input wire 	 jumpButton,
 	       output wire 	 Hsync,
 	       output wire 	 Vsync,
 	       output wire [2:0] vgaRed,
@@ -8,54 +10,102 @@ module top_vga(
 	       output wire [1:0] vgaBlue);
 
    localparam ratio = 1;
-   
+   localparam ScreenH = 480;
+   localparam ScreenW = 640;
+
+   wire [31:0] x;       // VGA pixel scan X      
+   wire [31:0] y;       // VGA pixel scan Y
+   wire [31:0] GroundY; // Horizon Y coordinate
+
+   wire  pixel_clk;     // 25Mhz pixel scan clock rate
+   wire  animateClock;  // controls the animation of dino's foot step, and bird wings
+   wire  ObstacleClock; // controls the speed of Ground & Obstacle movement
+   wire  ScoreClock;    // Speed of Score coutner (1s = 10 points)
+
+   wire  rst;
+   wire  jump;
+   wire  duck;
+
+   // Initial assignments
+
+   assign GroundY = ScreenH - (ScreenH >> 2);   // Ground Y coordinate assignment
+
+
+
+
    // Begin of clock divider.
+
    // Output: pixel_clk ==> 25MHz Clock
-   wire 			 pixel_clk;
+   // wire 			 pixel_clk;
    vgaClk _vgaClk(.clk(clk), 
-		  .pix_clk(pixel_clk));
+		              .pix_clk(pixel_clk));
    // Now pixel_clk is a 25MHz clock, hopefully.
    // End of Clock Divider
-   wire 			 animateClock;
-   ClockDivider #(.velocity(2))
-      animateClk (.clk(clk),
-		  .speed(animateClock));
 
-   wire 			 ObstacleClock;
+
+   // wire 			 animateClock;
+   ClockDivider #(.velocity(2))   
+      animateClk (.clk(clk),
+		              .speed(animateClock));
+
+
+
+   // wire 			 ObstacleClock;
    ClockDivider #(.velocity(100))
       ObstacleClk (.clk(clk),
-		   .speed(ObstacleClock));
+		               .speed(ObstacleClock));
    
    
+   ClockDivider #(.velocity(10))  // Period = 0.1s
+      ScoreClkv (.clk(clk),
+                 .speed(ScoreClock));
+
    // Begin of Debouncer Module
-   // Generate: rst
-   wire 			 rst;
- 
+
+   // wire 			 rst;
    debouncer resetButton (.button_in(btnR),
 			  .clk(clk),
 			  .button_out(rst));
 
-   wire 			 jump;
-   debouncer jumpButton (.button_in(/* Assign button */),
+
+   // wire 			 jump;
+   debouncer jumpButton (.button_in(jumpButton/* Assign button */),
 			 .clk(clk),
 			 .button_out(jump));
 
-   wire 			 duck;
-   debouncer duckButton(.button_in(/* Assign button */),
+
+   // wire 			 duck;
+   debouncer duckButton(.button_in(duckButton/* Assign button */),
 			.clk(clk),
 			.button_out(duck));
+
    // End of debouncer
    
-   // Some Constant
-   localparam ScreenH = 480;
-   localparam ScreenW = 640;
-
-   // Draw horizon
-   wire [3:0] 			 horizonSEL;
-   assign horizonSEL = 4'b0000;
    
-   wire [31:0] 			 GroundY;
-   assign GroundY = ScreenH - ScreenH >> 2;
+   // Begin of VGA module
+   // Some Constant for VGA module
+   // localparam ScreenH = 480;
+   // localparam ScreenW = 640;
+   // wire [31:0] x;
+   // wire [31:0] y;
+
+   VGA vga(
+           .pixel_clock(pixel_clk),
+           .rst(rst),
+           .Hsync(Hsync),
+           .Vsync(Vsync),
+           .X(x),
+           .Y(y));
+
+   // End of VGA
+
+
+
+   // Draw horizon (Module: BackGround)
+   wire [3:0] 			 horizonSEL;   // Multiplexor
+   assign horizonSEL = 4'b0000;    // 选择画地面
+   
+   // wire [31:0] 			 GroundY;
 
    reg [31:0] 			 Ground_1_X;
    reg [31:0] 			 Ground_2_X;
@@ -67,25 +117,25 @@ module top_vga(
    
    drawBackGround #(.ratio(ratio))
       horizon1 (.rst(rst),
-		.ox(Ground_1_X),
-		.oy(GroundY),
-		.X(x),
-		.Y(y),
-		.select(horizonSEL),
-		.objectWidth(GroundW),
-		.objectHeight(GroundH),
-		.inGrey(Ground_1_inGrey));
+            		.ox(Ground_1_X),
+            		.oy(GroundY),
+            		.X(x),
+            		.Y(y),
+            		.select(horizonSEL),
+            		.objectWidth(GroundW),
+            		.objectHeight(GroundH),
+            		.inGrey(Ground_1_inGrey));
 
    drawBackGround #(.ratio(ratio))
       horizon2 (.rst(rst),
-		.ox(Ground_2_X),
-		.oy(GroundY),
-		.X(x),
-		.Y(y),
-		.select(horizonSEL),
-		.objectWidth(GroundW),
-		.objectHeight(GroundH),
-		.inGrey(Ground_2_inGrey));
+            		.ox(Ground_2_X),
+            		.oy(GroundY),
+            		.X(x),
+            		.Y(y),
+            		.select(horizonSEL),
+            		.objectWidth(GroundW),
+            		.objectHeight(GroundH),
+            		.inGrey(Ground_2_inGrey));
 
    /* Horizon movement */
 		
@@ -93,12 +143,12 @@ module top_vga(
    // Numbers (Score board)
    wire [31:0] 			 Num1_x;
    wire [31:0] 			 Num1_y;
-   wire [31:0]                   Num2_x;
-   wire	[31:0]                   Num2_y;
-   wire [31:0]                   Num3_x;
-   wire	[31:0]                   Num3_y;
-   wire [31:0]                   Num4_x;
-   wire	[31:0]                   Num4_y;
+   wire [31:0]       Num2_x;
+   wire	[31:0]       Num2_y;
+   wire [31:0]       Num3_x;
+   wire	[31:0]       Num3_y;
+   wire [31:0]       Num4_x;
+   wire	[31:0]       Num4_y;
    
    wire [10:0] 			 Num_H;
    wire [10:0] 			 Num_W;
@@ -107,9 +157,9 @@ module top_vga(
    assign Num_H = 21;
 
    wire 			 Num1_inGrey;
-   wire	                         Num2_inGrey;
-   wire	                         Num3_inGrey;
-   wire	                         Num4_inGrey;
+   wire	       Num2_inGrey;
+   wire	       Num3_inGrey;
+   wire	       Num4_inGrey;
    /* Assign Number Position */
    localparam num_top_right_x = ScreenW - 30 - Num_W;
    localparam num_top_y = 30;
@@ -125,10 +175,12 @@ module top_vga(
    assign Num1_y = Num2_y;
 
    reg [3:0] 			 Num1_SEL;
-   reg [3:0]                     Num2_SEL;
-   reg [3:0]                     Num3_SEL;
-   reg [3:0]                     Num4_SEL;
+   reg [3:0]       Num2_SEL;
+   reg [3:0]       Num3_SEL;
+   reg [3:0]       Num4_SEL;
    
+   /* Number SEL module here */
+
    drawNumber #(.ratio(ratio))
       Num1 (.rst(rst),
 	    .ox(Num1_x),
@@ -219,89 +271,49 @@ module top_vga(
 
    always @(*) begin
       if (rst) begin
-	 DinoY <= GroundY;
+	       DinoY <= GroundY;
       end
       else
-	DinoY <= DinoY + Y_Displacement;
+	       DinoY <= DinoY + Y_Displacement; 
    end
    
-   
-   // Begin of VGA module
-   wire [31:0] 			 x;
-   wire [31:0] 			 y;
-   wire 			 active;
-   
-   
-    vga640x480 vga(
-        .dclk(pixel_clk),
-        .clr(rst),
-        .hsync(Hsync),
-        .vsync(Vsync),
-        .X(x),
-        .Y(y));
-        
-   /*VGA vga(.clk(clk),
-	   .pixel_clk(pixel_clk),
-	   .rst(rst),
-	   .Hsync(Hsync),
-	   .Vsync(Vsync),
-	   .active(active),
-	   .x(x),
-	   .y(y));
-       */
-   // End of VGA module
 
-   // SRAM buffer
-   localparam DISPLAY_WIDTH = 640;
-   localparam DISPLAY_HEIGHT = 480;
-   
-   wire inWhite;
-   wire inWhite_dino;
-   wire inGrey_dino;
-   wire [11:0] dinoW;
-   wire [6:0] dinoH;
-   wire inHitDino;
-   
-   wire [3:0]SEL;
-   assign SEL = 4'b1010;
-   wire [31:0] OX;
-   wire [31:0] OY;
-   assign OX = 31'd100;
-   assign OY = 31'd300;
-   drawDino #(.ratio(ratio)) 
-    dino1 ( 
-        .ox(OX), 
-        .oy(OY), 
-        .X(x), 
-        .Y(y), 
-        .select(SEL),
-        .inWhite(inWhite_dino), 
-        .inGrey(inGrey_dino));
-        
-   
-    
-   //$display("in White is %h\n", inWhite_dino);
+
+
+   /* Color Select */
+   wire isGrey;
+   wire isWhite;
    wire isBackGround;
-   assign isBackGround = x < 640 && x >= 0 && y >= 0 && y < 479;
-  
-   reg [7:0] color;
-   always @(posedge clk) begin
-        if (inWhite_dino)
-            color <= 10101010;
-        else if (inGrey_dino)
-            color <= 8'b00100101;
-        else if (isBackGround)
-            color <= 8'b11111111;
-//        if (inWhite_dino)
-//            color <= 8'b111_111_11;
-//        else if (inGrey_dino)
-//            color <= 8'b01110000;
-//        else
-//            color <= 8'b111_111_11;
+
+   /* Assign Values to color select wires */
+
+
+   reg [2:0] red;
+   reg [2:0] green;
+   reg [1:0] blue;
+   /* always */
+   always @(*) begin
+     if (isGrey) begin
+       red <= 3'b000;
+       green <= 3'b000;
+       blue <= 2'b00;
+     end
+
+     else if (isWhite) begin
+       red <= 3'b111;
+       green <= 3'b111;
+       blue <= 2'b11;
+     end
+
+     else if (isBackGround) begin
+       red <= 3'b100;
+       green <= 3'b100;
+       blue <= 2'b10;
+     end
    end
-   
-   assign vgaRed = color[7:5];
-   assign vgaGreen = color[4:2];
-   assign vgaBlue = color[1:0];
+
+   assign vgaRed = red;
+   assign vgaGreen = green;
+   assign vgaBlue = blue;
       
 endmodule // top_vga
