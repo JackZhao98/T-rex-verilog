@@ -119,7 +119,7 @@ def Analyzer(fileName, findColor):
 def moduleInit(moduleName):
 	print("module draw" + moduleName + "#(parameter ratio = 1)\n" + "\t(", end = "")
 	print('''
-	    input  wire 	   rst,
+	    input  wire        rst,
 	    input  wire [31:0] ox,
 	    input  wire [31:0] oy,
 	    input  wire [31:0] X,
@@ -178,7 +178,7 @@ def moduleSel(basePath):
 			print('\tinGrey <= inGrey_' + name + ";")
 			print('\tobjectWidth <= ' + name + "Width;")
 			print('\tobjectHeight <= ' + name + "Height;")
-			print('end // end of case: Case: ' + name + '\n')
+			print('end // end of case\n')
 		print("\nendcase\n\nend\t// end of always @(*)\n")
 
 	except Exception as e:
@@ -237,5 +237,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-
