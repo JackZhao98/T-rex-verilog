@@ -34,12 +34,76 @@ module top_vga(
 			.button_out(duck));
    // End of debouncer
    
-   // T-Rex vertical jump simulator
+   // Some Constant
+   localparam ScreenH = 480;
+   localparam ScreenW = 640;
+
+   // Draw horizon
+   wire [3:0] 			 horizonSEL;
+   assign horizonSEL = 4'b0000;
+   
+   wire [31:0] 			 GroundY;
+   assign GroundY = ScreenH - ScreenH >> 2;
+
+   reg [31:0] 			 Ground_1_X;
+   reg [31:0] 			 Ground_2_X;
+   
+   drawBackGround #(.ratio(1))
+      horizon1 (.rst(rst),
+		.ox(Ground_1_X),
+		.oy(GroundY),
+		.X(x),
+		.Y(y),
+		.select(horizonSEL),
+		.
+		
+   
+   // Numbers (Score board)
+   wire [31:0] 			 Num1_x;
+   wire [31:0] 			 Num1_y;
+   wire [31:0]                   Num2_x;
+   wire	[31:0]                   Num2_y;
+   wire [31:0]                   Num3_x;
+   wire	[31:0]                   Num3_y;
+   wire [31:0]                   Num4_x;
+   wire	[31:0]                   Num4_y;
+   wire [10:0] 			 Num_H;
+   wire [10:0] 			 Num_W;
+
+   assign Num_W = 20;
+   assign Num_H = 21;
+
+   /* Assign Number Position */
+   localparam num_top_right_x = ScreenW - 30 - Num_W;
+   localparam num_top_y = 30;
+   localparam num_gap = 10;
+   
+   assign Num4_x = num_top_right_x;
+   assign Num3_x = Num4_x - Num_W - num_gap;
+   assign Num2_x = Num3_x - Num_W - num_gap;
+   assign Num1_x = Num2_x - Num_W - num_gap;
+   assign Num4_y = num_top_y;
+   assign Num3_y = Num4_y;
+   assign Num2_y = Num3_y;
+   assign Num1_y = Num2_y;
+   
+// T-Rex vertical jump simulator   
+
    // Vert_Velocity = a*t
    reg [31:0] 			 DinoX;
    reg [31:0] 			 DinoY;
    wire [10:0] 			 DinoH;
    wire [10:0] 			 DinoW;
+
+   wire 			 Airborne;
+   wire 			 onGround;
+   wire 			 isDuck;
+   wire 			 isDead;
+
+   assign Airborne = (DinoY < GroundY)? 1:0;
+   assign onGround = (DinoY == GroundY)? 1:0;
+   assign isDuck = duck;
+   /* assign isDead */
    /* 
       Dino Art
    */

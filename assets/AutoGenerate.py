@@ -125,8 +125,8 @@ def moduleInit(moduleName):
 	    input  wire [31:0] X,
 	    input  wire [31:0] Y,
 	    input  wire [3:0]  select,	// Select Pattern
-	    output reg  [10:0] objectWidth,
-	    output reg  [10:0] objectHeight,
+	    output reg  [11:0] objectWidth,
+	    output reg  [11:0] objectHeight,
 	    output reg 	       inHitBox,
 	    output reg 	       inWhite,
 	    output reg 	       inGrey);
