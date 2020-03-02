@@ -10,26 +10,54 @@ module top_vga(
    // Begin of clock divider.
    // Output: pixel_clk ==> 25MHz Clock
    wire 			 pixel_clk;
-   vgaClk _vgaClk(.clk(clk), .pix_clk(pixel_clk));
+   vgaClk _vgaClk(.clk(clk), 
+		  .pix_clk(pixel_clk));
    // Now pixel_clk is a 25MHz clock, hopefully.
    // End of Clock Divider
-
+   
    // Begin of Debouncer Module
    // Generate: rst
    wire 			 rst;
  
-   debouncer button1 (.button_in(btnR),
-		      .clk(clk),
-		      .button_out(rst));
-   
+   debouncer resetButton (.button_in(btnR),
+			  .clk(clk),
+			  .button_out(rst));
+
+   wire 			 jump;
+   debouncer jumpButton (.button_in(/* Assign button */),
+			 .clk(clk),
+			 .button_out(jump));
+
+   wire 			 duck;
+   debouncer duckButton(.button_in(/* Assign button */),
+			.clk(clk),
+			.button_out(duck));
    // End of debouncer
 
+   // T-Rex vertical jump simulator
+   // Vert_Velocity = a*t
+   wire [31:0] 			 DinoX;
+   wire [31:0] 			 DinoY;
+   /*
+    module Gravity#(parameter g=1)
+   (input wire rst,
+    input wire [31:0]  GroundY,
+    input wire [31:0]  Y,
+    output wire	[10:0] Displacement);
+    */
+   wire [10:0] 			 Y_Displacement;
+   Gravity #(.g(1), .InitialVelocity(-20))
+       dinoG(.rst(rst),
+	     .GroundY(GroundY),
+	     .Y(DinoY),
+	     .Displacement(Y_Displacement));
+   
+    
    // Begin of VGA module
    wire [31:0] 			 x;
    wire [31:0] 			 y;
    wire 			 active;
-
-    
+   
    
     vga640x480 vga(
         .dclk(pixel_clk),
