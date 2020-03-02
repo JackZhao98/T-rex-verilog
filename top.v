@@ -33,26 +33,32 @@ module top_vga(
 			.clk(clk),
 			.button_out(duck));
    // End of debouncer
-
+   
    // T-Rex vertical jump simulator
    // Vert_Velocity = a*t
-   wire [31:0] 			 DinoX;
-   wire [31:0] 			 DinoY;
+   reg [31:0] 			 DinoX;
+   reg [31:0] 			 DinoY;
+   wire [10:0] 			 DinoH;
+   wire [10:0] 			 DinoW;
+   /* 
+      Dino Art
+   */
+   
    /*
-    module Gravity#(parameter g=1)
-   (input wire rst,
-    input wire [31:0]  GroundY,
-    input wire [31:0]  Y,
-    output wire	[10:0] Displacement);
-    */
+      Dino Movement
+   */
    wire [10:0] 			 Y_Displacement;
    Gravity #(.g(1), .InitialVelocity(-20))
        dinoG(.rst(rst),
-	     .GroundY(GroundY),
+	     .GroundY(GroundY - DinoH),
 	     .Y(DinoY),
 	     .Displacement(Y_Displacement));
+
+   always @(posedge AnimateClk or posedge rst) begin
+      if (rst) begin
+	 DinoY <= GroundY;
+	 
    
-    
    // Begin of VGA module
    wire [31:0] 			 x;
    wire [31:0] 			 y;

@@ -6,9 +6,11 @@ module Gravity#(parameter g=1, InitialSpeed=-20)
     output wire [10:0] Displacement);
    
    wire [10:0] 	       Time;
-   assign Time = (Y - GroundY) / g;
-
+   assign Time = (Y - GroundY) / g - InitialSpeed;
+   // a*t + v0 = (x1 - x0)
+   
    reg [10:0] 	       instVelocity;
+   
    always @(*) begin
       if (rst)
 	instVelocity <= 11'b0;
@@ -16,6 +18,7 @@ module Gravity#(parameter g=1, InitialSpeed=-20)
 	instVelocity <= instVelocity + Time * g;
    end
    
-   assign Displacement = instantVelocity * Time;
+   assign Displacement = (Time == 0)? instantVelocity:instantVelocity * Time;
 
+   
 endmodule // Gravity
