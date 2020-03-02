@@ -1,3 +1,9 @@
+2020-03-01  Jack Zhao  <jackzhao@Jacks-MacBook-Pro.local>
+
+	* top.v: More update
+
+	* ClockDivider.v: Change parameter to 50M
+
 	* top.v: Connecting modules in top modules.
 	
 	* DinoFSM.v: FSM module for T-Rex movement.
