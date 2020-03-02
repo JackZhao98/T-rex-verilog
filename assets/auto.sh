@@ -4,7 +4,7 @@ DIR="./assets"
 
 for file in $files; do
     baseName=$(echo "$file" | sed 's|[\.\/]||g')
-    ./AutoGenerate.py $file > ./draw$baseName.v
+    ./AutoGenerate.py $file > ../draw$baseName.v
     echo $file "has been generated."
 done;
 
