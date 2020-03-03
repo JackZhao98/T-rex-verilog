@@ -8,7 +8,4 @@
 	
 	* DinoFSM.v: FSM module for T-Rex movement.
 
-	* Gravity.v: v0.1 Initialze Gravity module. Initial speed and gravity are passed as parameters. Both variables are expected to be integers, and InitialSpeed is expected to be divided by 2 if squared (i.e. IS^2/2 is a whole number). 
-
 	* draw*.v: All drawing modules are updated. 
-
