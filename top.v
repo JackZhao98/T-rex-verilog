@@ -27,10 +27,7 @@ module top_vga(
    wire  duck;
 
    // Initial assignments
-
    assign GroundY = ScreenH - (ScreenH >> 2);   // Ground Y coordinate assignment
-
-
 
 
    // Begin of clock divider.
@@ -47,7 +44,6 @@ module top_vga(
    ClockDivider #(.velocity(2))   
       animateClk (.clk(clk),
 		              .speed(animateClock));
-
 
 
    // wire 			 ObstacleClock;
@@ -100,7 +96,6 @@ module top_vga(
    // End of VGA
 
 
-
    // Draw horizon (Module: BackGround)
    wire [3:0] 			 horizonSEL;   // Multiplexor
    assign horizonSEL = 4'b0000;    // 选择画地面
@@ -139,145 +134,33 @@ module top_vga(
 
    /* Horizon movement */
 		
-   
-   // Numbers (Score board)
-   wire [31:0]       Num1_x;
-   wire [31:0] 	     Num1_y;
-   wire [31:0]       Num2_x;
-   wire	[31:0]       Num2_y;
-   wire [31:0]       Num3_x;
-   wire	[31:0]       Num3_y;
-   wire [31:0]       Num4_x;
-   wire	[31:0]       Num4_y;
-   
-   wire [10:0] 	     Num_H;
-   wire [10:0] 	     Num_W;
+   wire ScoreBoard_inGrey;
 
-   assign Num_W = 20;
-   assign Num_H = 21;
+   ScoreBoardDelegate SBD(.ScoreClock(ScoreClock),
+                          .rst(rst),
+                          .vgaX(x),
+                          .vgaY(y),
+                          inGrey(ScoreBoard_inGrey));
 
-   wire        Num1_inGrey;
-   wire	       Num2_inGrey;
-   wire	       Num3_inGrey;
-   wire	       Num4_inGrey;
-   /* Assign Number Position */
-   localparam num_top_right_x = ScreenW - 30 - Num_W;
-   localparam num_top_y = 30;
-   localparam num_gap = 10;
-   
-   assign Num4_x = num_top_right_x;
-   assign Num3_x = Num4_x - Num_W - num_gap;
-   assign Num2_x = Num3_x - Num_W - num_gap;
-   assign Num1_x = Num2_x - Num_W - num_gap;
-   assign Num4_y = num_top_y;
-   assign Num3_y = Num4_y;
-   assign Num2_y = Num3_y;
-   assign Num1_y = Num2_y;
 
-   reg [3:0]       Num1_SEL;
-   reg [3:0]       Num2_SEL;
-   reg [3:0]       Num3_SEL;
-   reg [3:0]       Num4_SEL;
-   
-   /* Number SEL module here */
-
-   drawNumber #(.ratio(ratio))
-      Num1 (.rst(rst),
-	    .ox(Num1_x),
-	    .oy(Num1_y)),
-	    .X(x),
-	    .Y(y),
-	    .select(Num1_SEL),
-	    .inGrey(Num1_inGrey));
-
-   drawNumber #(.ratio(ratio))
-      Num2 (.rst(rst),
-            .ox(Num2_x),
-            .oy(Num2_y),
-            .X(x),
-            .Y(y),
-            .select(Num2_SEL),
-            .inGrey(Num2_inGrey));
-
-   drawNumber #(.ratio(ratio))
-      Num3 (.rst(rst),
-            .ox(Num3_x),
-            .oy(Num3_y),
-            .X(x),
-            .Y(y),
-            .select(Num3_SEL),
-            .inGrey(Num3_inGrey));
-
-   drawNumber #(.ratio(ratio))
-      Num4 (.rst(rst),
-            .ox(Num4_x),
-            .oy(Num4_y),
-            .X(x),
-            .Y(y),
-            .select(Num4_SEL),
-            .inGrey(Num4_inGrey));
-   
-// T-Rex vertical jump simulator   
-
-   // Vert_Velocity = a*t
-   reg [31:0] 			 DinoX;
-   reg [31:0] 			 DinoY;
-   wire [10:0] 			 DinoH;
-   wire [10:0] 			 DinoW;
-
-   wire 			 Airborne;
-   wire 			 onGround;
-   wire 			 isDuck;
-   wire 			 isDead;
-
-   assign Airborne = (DinoY < GroundY)? 1:0;
-   assign onGround = (DinoY == GroundY)? 1:0;
-   assign isDuck = duck;
-   /* assign isDead */
-   /* 
-    
-      Dino Art
-   */
    wire 			 dino_inWhite;
    wire 			 dino_inGrey;
-   wire [3:0] 			 dinoSEL;
    
-   drawDino #(.ratio(ratio))
-     dino (
-       .rst(rst),
-       .ox(DinoX),
-       .oy(DinoY),
-       .X(x),
-       .Y(y),
-       .select(dinoSEL),
-       .objectWidth(dinoW),
-       .objectHeight(dinoH),
-       .inWhite(dino_inWhite),
-       .inGrey(dino_inGrey));
-   
-   /*
-      Dino Movement
-   */
-   wire [10:0] 			 Y_Displacement;
-   wire [10:0] 			 V0;
-   
-   assign V0 = (jump || Airborne)? -20:0;
-      
-   Gravity #(.g(1), .InitialVelocity(V0))
-       dinoG(.rst(rst),
-	     .GroundY(GroundY - DinoH),
-	     .Y(DinoY),
-	     .Displacement(Y_Displacement));
+   TRexDelegate #(.ratio(1))
+      dino(.rst(rst),
+           .animationClk(animateClock),
+           .jump(jump),
+           .duck(duck),
+           .GroundY(GroundY),
+           .vgaX(x),
+           .vgaY(y),
+           .DinoHeight(DinoH),
+           .DinoWidth(DinoW),
+           .inGrey(dino_inGrey),
+           .inWhite(dino_inWhite));
 
-   always @(*) begin
-      if (rst) begin
-	       DinoY <= GroundY;
-      end
-      else
-	       DinoY <= DinoY + Y_Displacement; 
-   end
-   
 
+   GameDelegate gameFSM();
 
 
    /* Color Select */
@@ -285,13 +168,18 @@ module top_vga(
    wire isWhite;
    wire isBackGround;
 
+   assign isGrey = dino_inGrey | Ground_1_inGrey | Ground_2_inGrey | ScoreBoard_inGrey;
+   assign isWhite = dino_inWhite;
+   assign inBackGround = (x > 0) && (x <= ScreenW) 
+                      && (y > 0) && (y <= ScreenH) 
+                      && !inWhite && !inGrey;
    /* Assign Values to color select wires */
 
 
    reg [2:0] red;
    reg [2:0] green;
    reg [1:0] blue;
-   /* always */
+   
    always @(*) begin
      if (isGrey) begin
        red <= 3'b000;
@@ -306,9 +194,9 @@ module top_vga(
      end
 
      else if (isBackGround) begin
-       red <= 3'b100;
-       green <= 3'b100;
-       blue <= 2'b10;
+       red <= 3'b111;
+       green <= 3'b111;
+       blue <= 2'b11;
      end
    end
 

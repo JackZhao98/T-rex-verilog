@@ -68,7 +68,7 @@ def Analyzer(fileName, findColor):
 		for x in range(width):
 			#print (pixels[x,y])
 			if color == pixels[x,y]:
-				hitPx.append((x,y))
+				hitPx.append((x, (y + (height/2.0 - y) * 2)))
 
 	newList = []
 	for key, group in itertools.groupby(hitPx, operator.itemgetter(1)):
@@ -104,7 +104,7 @@ def Analyzer(fileName, findColor):
 	for i in range(0,len(resultLine), 2):
 		offset_X1 = "" if (resultLine[i][0] == 0) else " + " + str(resultLine[i][0]) + " * px"
 		offset_X2 = "" if (resultLine[i + 1][0] == 0) else " + " + str(resultLine[i + 1][0]) + " * px"
-		offset_Y1 = "" if (resultLine[i][1] == 0) else " + " + str(resultLine[i][1]) + " * px"
+		offset_Y1 = "" if (resultLine[i][1]-1 == 0) else " - " + str(int(resultLine[i][1])-1) + " * px"
 		# offset_Y2 = "" if (resultLine[i + 1][1] + 1 == 0) else " + " + str(resultLine[i + 1][1] + 1) + " * px"
 		
 		if resultLine[i] == resultLine[0]:

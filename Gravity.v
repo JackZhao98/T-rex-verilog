@@ -13,9 +13,9 @@ module Gravity#(parameter g=1, InitialSpeed=-20)
    
    always @(*) begin
       if (rst)
-	instVelocity <= 11'b0;
+        instVelocity <= 11'b0;
       else
-	instVelocity <= instVelocity + Time * g;
+	      instVelocity <= instVelocity + Time * g;
    end
    
    assign Displacement = (Time == 0)? instantVelocity:instantVelocity * Time;
