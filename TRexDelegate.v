@@ -1,4 +1,4 @@
-module TRexDelegate #(parameter ratio=1)(
+module TRexDelegate #(parameter ratio=1, V_init = -10'd30, g = 4'd1)(
     input wire rst,
     input wire animationClk,
     input wire FrameClk,
@@ -7,6 +7,8 @@ module TRexDelegate #(parameter ratio=1)(
     input wire [31:0] GroundY,
     input wire [31:0] vgaX,
     input wire [31:0] vgaY,
+    output wire [31:0] Dino_X,
+    output wire [31:0] Dino_Y,
     output wire [10:0] DinoHeight,
     output wire [10;0] DinoWidth,
     output wire inGrey,
@@ -41,17 +43,31 @@ module TRexDelegate #(parameter ratio=1)(
       Dino Movement
    */
    wire [10:0] 			 Y_Displacement;
-   wire [10:0] 			 V0;
+   reg [10:0] 			 local_V;
+
+
    
    /* Gravity Module */
 
-    always @(*) begin
+    always @(posedge FrameClk or posedge rst) begin
         if (rst) begin
             DinoX <= defaultX;
             DinoY <= defaultY;
         end
+
+        if (jump && onGround) begin
+            local_V <= V_init;
+        end
+
+        else if (local_V > 0 && onGround) begin
+            local_V <= 0;
+            DinoX <= defaultX;
+            DinoY <= defaultY;
+        end
+
         else begin
-            DinoY <= DinoY + Y_Displacement; 
+            local_V <= local_V + g;
+            DinoY <= DinoY + local_V; 
             DinoX <= defaultX;
         end
            
@@ -79,15 +95,11 @@ module TRexDelegate #(parameter ratio=1)(
         .inWhite(dino_inWhite),
         .inGrey(dino_inGrey));
 
+    assign Dino_X = DinoX;
+    assign Dino_Y = DinoY;
     assign inGrey = dino_inGrey;
     assign inWhite = dino_inWhite;
     assign DinoWidth = DinoW;
     assign DinoHeight = DinoH;
 
 endmodule
-
-
-
-
-
-
