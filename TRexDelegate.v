@@ -1,6 +1,7 @@
 module TRexDelegate #(parameter ratio=1)(
     input wire rst,
     input wire animationClk,
+    input wire FrameClk,
     input wire jump,
     input wire duck,
     input wire [31:0] GroundY,
@@ -19,7 +20,7 @@ module TRexDelegate #(parameter ratio=1)(
 
     wire [31:0] defaultX;
     wire [31:0] defaultY;
-    assign defaultX = 32'd100;
+    assign defaultX = 32'd50;
     assign defaultY = GroundY;
 
     wire	Airborne;
@@ -43,22 +44,17 @@ module TRexDelegate #(parameter ratio=1)(
    wire [10:0] 			 V0;
    
    /* Gravity Module */
-   /*Gravity #(.g(1), .InitialVelocity(V0))
-       dinoG(.rst(rst),
-	     .GroundY(GroundY),
-	     .Y(DinoY),
-	     .Displacement(Y_Displacement));*/
 
     always @(*) begin
-    	if (rst) begin
-    		DinoX <= defaultX;
-    		DinoY <= defaultY;
-    	end
-    	else begin
-    		DinoY <= DinoY + Y_Displacement; 
-	        DinoX <= defaultX;
-    	end
-	       
+        if (rst) begin
+            DinoX <= defaultX;
+            DinoY <= defaultY;
+        end
+        else begin
+            DinoY <= DinoY + Y_Displacement; 
+            DinoX <= defaultX;
+        end
+           
     end
 
     DinoFSM fsm(

@@ -28,29 +28,25 @@ module top_vga(
 
    // Initial assignments
    assign GroundY = ScreenH - (ScreenH >> 2);   // Ground Y coordinate assignment
+   // 640 - 160 = 480 --> Bottom 25 %
 
 
    // Begin of clock divider.
-
    // Output: pixel_clk ==> 25MHz Clock
    // wire 			 pixel_clk;
    vgaClk _vgaClk(.clk(clk), 
 		              .pix_clk(pixel_clk));
    // Now pixel_clk is a 25MHz clock, hopefully.
-   // End of Clock Divider
-
 
    // wire 			 animateClock;
    ClockDivider #(.velocity(2))   
       animateClk (.clk(clk),
 		              .speed(animateClock));
 
-
    // wire 			 ObstacleClock;
    ClockDivider #(.velocity(100))
       ObstacleClk (.clk(clk),
 		               .speed(ObstacleClock));
-   
    
    ClockDivider #(.velocity(10))  // Period = 0.1s
       ScoreClkv (.clk(clk),
@@ -84,12 +80,14 @@ module top_vga(
    // localparam ScreenW = 640;
    // wire [31:0] x;
    // wire [31:0] y;
+   wire Frame_Clk;
 
    VGA vga(
            .pixel_clock(pixel_clk),
            .rst(rst),
            .Hsync(Hsync),
            .Vsync(Vsync),
+           .FPSClk(Frame_Clk),
            .X(x),
            .Y(y));
 
@@ -141,14 +139,16 @@ module top_vga(
                           .vgaX(x),
                           .vgaY(y),
                           inGrey(ScoreBoard_inGrey));
-
-
+      
+      
+      
    wire 			 dino_inWhite;
    wire 			 dino_inGrey;
    
    TRexDelegate #(.ratio(1))
       dino(.rst(rst),
            .animationClk(animateClock),
+           .FrameClk(Frame_Clk),
            .jump(jump),
            .duck(duck),
            .GroundY(GroundY),
@@ -160,8 +160,20 @@ module top_vga(
            .inWhite(dino_inWhite));
 
 
-   GameDelegate gameFSM();
+   wire obstacle_inWhite;
+   wire obstacle_inGrey;
 
+
+   wire [1:0] gameState;
+   GameDelegate gameFSM(
+          .clk(clk),
+          .rst(rst),
+          .gameState(gameState));
+
+
+
+   // 关于选择RGB颜色的模块
+   // 希望能好用。。
 
    /* Color Select */
    wire isGrey;

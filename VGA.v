@@ -3,6 +3,7 @@ module VGA(
 	   input wire 	      rst,   //asynchronous reset
 	   output wire 	      Hsync, //horizontal sync out
 	   output wire 	      Vsync, //vertical sync out
+     output wire        FPSClk,
 	   output wire [31:0] X,     // X counter coordinate
 	   output wire [31:0] Y      // Y counter Coordinate
      );                        
@@ -76,6 +77,8 @@ assign Vsync = (vc < vpulse) ? 0:1;
 
 assign X = (hc >= hbp)? (hc-hbp):0;
 assign Y = (vc >= vbp)? (vc -vbp):0;
+
+assign FPSClk = ((hc == hpixels) & (vc == screen_height - 1));
 
 endmodule
 
