@@ -70,4 +70,3 @@ module BackGoundDelegate #(parameter ratio = 1, dx = 30)
     assign inGrey = Ground_1_inGrey | Ground_2_inGrey;
 
 endmodule
-

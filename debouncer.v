@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module debouncer(
+module Debouncer(
 		 input 	button_in,
 		 input 	clk,
 		 output reg button_out);

@@ -56,22 +56,20 @@ module top_vga(
 
    // Begin of Debouncer Module
 
-   // wire 			 rst;
-   debouncer resetButton (
+   // wire       rst;
+   Debouncer resetButton (
        .button_in(btnR),
        .clk(clk),
        .button_out(rst));
 
-
-   // wire 			 jump;
-   debouncer jumpButton (
+   // wire       jump;
+   Debouncer jumpButton (
        .button_in(jumpButton/* Assign button */),
        .clk(clk),
        .button_out(jump));
 
-
-   // wire 			 duck;
-   debouncer duckButton(
+   // wire       duck;
+   Debouncer duckButton(
        .button_in(duckButton/* Assign button */),
        .clk(clk),
        .button_out(duck));
@@ -107,8 +105,7 @@ module top_vga(
           .gameState(gameState));
 
 
-
-   
+ 
    // Begin of VGA module
    // Some Constant for VGA module
    // localparam ScreenH = 480;
@@ -116,8 +113,7 @@ module top_vga(
    // wire [31:0] x;
    // wire [31:0] y;
 
-   VGA vga(
-           .pixel_clock(pixel_clk),
+   VGA vga(.pixel_clock(pixel_clk),
            .rst(rst),
            .Hsync(Hsync),
            .Vsync(Vsync),
