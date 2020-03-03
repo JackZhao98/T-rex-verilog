@@ -1,4 +1,4 @@
-module top_vga(
+module TRex(
 	       input wire 	 clk,
 	       input wire 	 btnR, // Reset button
 	       input wire 	 duckButton,
