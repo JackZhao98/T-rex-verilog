@@ -208,7 +208,7 @@ module TRex(
    reg [2:0] green;
    reg [1:0] blue;
    
-   always @(posedge Frame_Clk) begin
+	always @(posedge pixel_clk) begin
      if (isGrey) begin
        red <= 3'b000;
        green <= 3'b000;
