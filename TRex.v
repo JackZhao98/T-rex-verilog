@@ -196,7 +196,7 @@ module TRex(
    wire isWhite;
    wire isBackGround;
 
-   assign isGrey = dino_inGrey | Ground_1_inGrey | Ground_2_inGrey | ScoreBoard_inGrey;
+   assign isGrey = dino_inGrey | BackGround_inGrey | ScoreBoard_inGrey;
    assign isWhite = dino_inWhite | obstacle_inWhite;
    assign inBackGround = (x > 0) && (x <= ScreenW) 
                       && (y > 0) && (y <= ScreenH) 
@@ -208,7 +208,7 @@ module TRex(
    reg [2:0] green;
    reg [1:0] blue;
    
-	always @(posedge pixel_clk) begin
+   always @(posedge pixel_clk) begin
      if (isGrey) begin
        red <= 3'b000;
        green <= 3'b000;
