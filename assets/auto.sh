@@ -1,6 +1,5 @@
 #!/bin/bash
 files=$(find . -type d -regex '\./[A-Za-z]*')
-DIR="./assets"
 
 for file in $files; do
     baseName=$(echo "$file" | sed 's|[\.\/]||g')
