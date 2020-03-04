@@ -120,10 +120,10 @@ def moduleInit(moduleName):
 	print("module draw" + moduleName + "#(parameter ratio = 1)\n" + "\t(", end = "")
 	print('''
 	    input  wire        rst,
-	    input  wire [31:0] ox,
-	    input  wire [31:0] oy,
-	    input  wire [31:0] X,
-	    input  wire [31:0] Y,
+	    input  wire [10:0] ox,
+	    input  wire [10:0] oy,
+	    input  wire [10:0] X,
+	    input  wire [10:0] Y,
 	    input  wire [3:0]  select,	// Select Pattern
 	    output reg  [11:0] objectWidth,
 	    output reg  [11:0] objectHeight,
