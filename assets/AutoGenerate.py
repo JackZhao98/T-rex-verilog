@@ -120,14 +120,13 @@ def moduleInit(moduleName):
 	print("module draw" + moduleName + "#(parameter ratio = 1)\n" + "\t(", end = "")
 	print('''
 	    input  wire        rst,
-	    input  wire [10:0] ox,
-	    input  wire [10:0] oy,
-	    input  wire [10:0] X,
-	    input  wire [10:0] Y,
+	    input  wire [10:0] ox,      // Object Origin
+	    input  wire [8:0]  oy,
+	    input  wire [9:0]  X,        // VGA Scanner
+	    input  wire [8:0]  Y,
 	    input  wire [3:0]  select,	// Select Pattern
-	    output reg  [11:0] objectWidth,
-	    output reg  [11:0] objectHeight,
-	    output reg 	       inHitBox,
+	    output reg  [7:0]  objectWidth,
+	    output reg  [6:0]  objectHeight,
 	    output reg 	       inWhite,
 	    output reg 	       inGrey);
 		''')
@@ -173,7 +172,6 @@ def moduleSel(basePath):
 		print("case(select)\n")
 		for sel, name in zip(selList, sanitize):
 			print(str(len(sel))+ "'b" + sel + ": begin\t// Case: " + name)
-			print('\tinHitBox <= inHitBox_' + name + ";")
 			print('\tinWhite <= inWhite_' + name + ";")
 			print('\tinGrey <= inGrey_' + name + ";")
 			print('\tobjectWidth <= ' + name + "Width;")
@@ -189,7 +187,6 @@ def moduleSel(basePath):
 				if entry.is_file() and "png" in entry.name:
 					name = entry.name.split('.')[0]
 					print("/*SEL*/: begin\t// Case: " + name)
-					print('\tinHitBox <= inHitBox_' + name + ";")
 					print('\tinWhite <= inWhite_' + name + ";")
 					print('\tinGrey <= inGrey_' + name + ";")
 					print('\tobjectWidth <= ' + name + "Width;")

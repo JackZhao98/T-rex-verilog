@@ -1,9 +1,9 @@
 module BackGroundDelegate #(parameter ratio = 1, dx = 30)
         (input wire FrameClk,
          input wire rst,
-         input wire [31:0] GroundY,
-         input wire [31:0] vgaX,
-         input wire [31:0] vgaY,
+         input wire [8:0] GroundY,
+         input wire [9:0] vgaX,
+         input wire [9:0] vgaY,
          input wire [1:0]  gameState,
          output wire inGrey,
          output wire inWhite);
@@ -13,9 +13,10 @@ module BackGroundDelegate #(parameter ratio = 1, dx = 30)
     wire [3:0]        horizonSEL;   // Multiplexor
     assign horizonSEL = 4'b0000;    // 选择画地面
 
-    reg [31:0]        Ground_1_X;
-    wire [11:0]        GroundH;
-    wire [11:0]        GroundW;
+    reg [11:0]        Ground_1_X;
+    wire [5:0]        GroundH;
+    
+    localparam GroundW = 2400;
 
     wire    Ground_1_inGrey;
 
@@ -31,8 +32,13 @@ module BackGroundDelegate #(parameter ratio = 1, dx = 30)
             Ground_1_X <= GroundW;
         end
 
+        else if (Ground_2_X + GroundW == 0) begin
+            Ground_2_X <= GroundW;
+        end
+
         else begin
             Ground_1_X <= Ground_1_X - dx;
+            Ground_2_X <= Ground_2_X - dx;
         end
 
     end
@@ -48,7 +54,7 @@ module BackGroundDelegate #(parameter ratio = 1, dx = 30)
                 .Y(y),
                 .select(horizonSEL),
                 .inGrey(Ground_1_inGrey));
-    /*
+
     drawBackGround #(.ratio(ratio))
       horizon2 (.rst(rst),
                 .ox(Ground_2_X),
@@ -56,10 +62,8 @@ module BackGroundDelegate #(parameter ratio = 1, dx = 30)
                 .X(x),
                 .Y(y),
                 .select(horizonSEL),
-                .objectWidth(GroundW),
-                .objectHeight(GroundH),
                 .inGrey(Ground_2_inGrey));
-    */
+
     assign inGrey = Ground_1_inGrey;
 
 endmodule

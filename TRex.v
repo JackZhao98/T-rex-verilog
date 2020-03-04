@@ -13,15 +13,24 @@ module TRex(
    localparam ScreenH = 480;
    localparam ScreenW = 640;
 
-   wire [10:0] x;       // VGA pixel scan X      
-   wire [10:0] y;       // VGA pixel scan Y
-   wire [10:0] GroundY; // Horizon Y coordinate
+   wire [9:0] x;       // VGA pixel scan X      
+   wire [8:0] y;       // VGA pixel scan Y
+   wire [8:0] GroundY; // Horizon Y coordinate
 
+   wire [10:0] dinoX;
+   wire [8:0] dinoY;
+   wire [6:0] DinoH;
+   wire [7:0] DinoW;
+
+   wire [10:0] ObsX;
+   wire [8:0]  ObsY;
+   wire [6:0]  ObsH;
+   wire [7:0]  ObsW;
+   
    wire  pixel_clk;     // 25Mhz pixel scan clock rate
    wire  animateClock;  // controls the animation of dino's foot step, and bird wings
-   // wire  ObstacleClock; // controls the speed of Ground & Obstacle movement
    wire  ScoreClock;    // Speed of Score coutner (1s = 10 points)
-   wire Frame_Clk;
+   wire  Frame_Clk;     // 60 FPS
 
    wire  rst;
    wire  jump;
@@ -125,14 +134,14 @@ module TRex(
 
    wire 			 BackGround_inGrey;
 
-   /*BackGroundDelegate #(.ratio(ratio), .dx(dx))
+   BackGroundDelegate #(.ratio(ratio), .dx(dx))
        BGD (.FrameClk(Frame_Clk),
             .rst(rst),
             .GroundY(GroundY),
             .vgaX(x),
             .vgaY(y),
             .gameState(gameState),
-            .inGrey(BackGround_inGrey));*/
+            .inGrey(BackGround_inGrey));
 
    /* Horizon movement */
 		
@@ -148,10 +157,11 @@ module TRex(
       
    wire        dino_inWhite;
    wire        dino_inGrey;
-   wire [10:0] dinoX;
-   wire [10:0] dinoY;
-   wire [9:0] DinoH;
-   wire [9:0] DinoW;
+   
+   /*wire [9:0]  dinoX;
+    wire [8:0] dinoY;
+    wire [6:0] DinoH;
+    wire [6:0] DinoW;*/
    TRexDelegate #(.ratio(ratio), .V_init(-10'd99))
       TRD (.rst(rst),
            .animationClk(animateClock),
@@ -171,8 +181,6 @@ module TRex(
 
    wire obstacle_inWhite;
    wire obstacle_inGrey;
-   wire [11:0] Obs1_W;
-   wire [11:0] Obs1_H;
    
    ObstaclesDelegate #(.ratio(ratio), .dx(dx))
       OD (.clk(clk),
@@ -184,8 +192,8 @@ module TRex(
           .gameState(gameState),
           .inGrey(obstacle_inGrey),
           .inWhite(obstacle_inWhite),
-          .Obs1_W(Obs1_W),
-          .Obs1_H(Obs1_H));
+          .Obs1_W(ObsW),
+          .Obs1_H(ObsH));
 
    
 

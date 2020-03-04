@@ -4,8 +4,8 @@ module VGA(
 	   output wire 	      Hsync, //horizontal sync out
 	   output wire 	      Vsync, //vertical sync out
      output wire        FPSClk,
-	   output wire [10:0] X,     // X counter coordinate
-	   output wire [10:0] Y      // Y counter Coordinate
+	   output wire [9:0] X,     // X counter coordinate
+	   output wire [8:0] Y      // Y counter Coordinate
      );                        
 
    /**********************
