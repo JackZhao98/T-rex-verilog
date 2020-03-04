@@ -4,8 +4,8 @@ module VGA(
 	   output wire 	      Hsync, //horizontal sync out
 	   output wire 	      Vsync, //vertical sync out
      output wire        FPSClk,
-	   output wire [31:0] X,     // X counter coordinate
-	   output wire [31:0] Y      // Y counter Coordinate
+	   output wire [10:0] X,     // X counter coordinate
+	   output wire [10:0] Y      // Y counter Coordinate
      );                        
 
    /**********************
@@ -28,8 +28,9 @@ parameter vfp = 511;  // beginning of vertical front porch
 // active vertical video is therefore: 511 - 31 = 480
 
 // graphic parameter (top-left is (0, 0))
-assign screen_width = hfp - hbp;
-assign screen_height = vfp - vbp;
+
+localparam screen_width = hfp - hbp;
+localparam screen_height = vfp - vbp;
 
 // registers for storing the horizontal & vertical counters
 reg [9:0] hc;

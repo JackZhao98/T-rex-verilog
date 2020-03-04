@@ -13,9 +13,9 @@ module TRex(
    localparam ScreenH = 480;
    localparam ScreenW = 640;
 
-   wire [31:0] x;       // VGA pixel scan X      
-   wire [31:0] y;       // VGA pixel scan Y
-   wire [31:0] GroundY; // Horizon Y coordinate
+   wire [10:0] x;       // VGA pixel scan X      
+   wire [10:0] y;       // VGA pixel scan Y
+   wire [10:0] GroundY; // Horizon Y coordinate
 
    wire  pixel_clk;     // 25Mhz pixel scan clock rate
    wire  animateClock;  // controls the animation of dino's foot step, and bird wings
@@ -27,7 +27,7 @@ module TRex(
    wire  jump;
    wire  duck;
 
-   wire [3:0] dx = 4'd5;
+   localparam dx = 4'd5;
    // Initial assignments
    assign GroundY = ScreenH - (ScreenH >> 2);   // Ground Y coordinate assignment
    // 640 - 160 = 480 --> Bottom 25 %
@@ -41,7 +41,7 @@ module TRex(
    // Now pixel_clk is a 25MHz clock, hopefully.
 
    // wire 			 animateClock;
-   ClockDivider #(.velocity(2))   
+   ClockDivider #(.velocity(4))   
       animateClk (.clk(clk),
                   .speed(animateClock));
 
@@ -63,13 +63,13 @@ module TRex(
        .button_out(rst));
 
    // wire       jump;
-   Debouncer jumpButton (
+   Debouncer jumpBtn (
        .button_in(jumpButton/* Assign button */),
        .clk(clk),
        .button_out(jump));
 
    // wire       duck;
-   Debouncer duckButton(
+   Debouncer duckBtn(
        .button_in(duckButton/* Assign button */),
        .clk(clk),
        .button_out(duck));
@@ -125,14 +125,14 @@ module TRex(
 
    wire 			 BackGround_inGrey;
 
-   BackGroundDelegate #(.ratio(ratio), .dx(dx))
-       BGD (.FrameClk(FrameClk),
+   /*BackGroundDelegate #(.ratio(ratio), .dx(dx))
+       BGD (.FrameClk(Frame_Clk),
             .rst(rst),
             .GroundY(GroundY),
             .vgaX(x),
             .vgaY(y),
             .gameState(gameState),
-            .inGrey(BackGround_inGrey));
+            .inGrey(BackGround_inGrey));*/
 
    /* Horizon movement */
 		
@@ -148,8 +148,11 @@ module TRex(
       
    wire        dino_inWhite;
    wire        dino_inGrey;
-   
-   TRexDelegate #(.ratio(ratio))
+   wire [10:0] dinoX;
+   wire [10:0] dinoY;
+   wire [9:0] DinoH;
+   wire [9:0] DinoW;
+   TRexDelegate #(.ratio(ratio), .V_init(-10'd99))
       TRD (.rst(rst),
            .animationClk(animateClock),
            .FrameClk(Frame_Clk),
@@ -158,6 +161,8 @@ module TRex(
            .GroundY(GroundY),
            .vgaX(x),
            .vgaY(y),
+           .Dino_X(dinoX),
+           .Dino_Y(dinoY),
            .DinoHeight(DinoH),
            .DinoWidth(DinoW),
            .inGrey(dino_inGrey),
@@ -166,7 +171,9 @@ module TRex(
 
    wire obstacle_inWhite;
    wire obstacle_inGrey;
-
+   wire [11:0] Obs1_W;
+   wire [11:0] Obs1_H;
+   
    ObstaclesDelegate #(.ratio(ratio), .dx(dx))
       OD (.clk(clk),
           .FrameClk(Frame_Clk),
@@ -178,11 +185,7 @@ module TRex(
           .inGrey(obstacle_inGrey),
           .inWhite(obstacle_inWhite),
           .Obs1_W(Obs1_W),
-          .Obs1_H(Obs1_H),
-          .Obs2_W(Obs2_W),
-          .Obs2_H(Obs2_H),
-          .Obs3_W(Obs3_W),
-          .Obs3_H(Obs3_H));
+          .Obs1_H(Obs1_H));
 
    
 
@@ -198,9 +201,7 @@ module TRex(
 
    assign isGrey = dino_inGrey | BackGround_inGrey | ScoreBoard_inGrey;
    assign isWhite = dino_inWhite | obstacle_inWhite;
-   assign inBackGround = (x > 0) && (x <= ScreenW) 
-                      && (y > 0) && (y <= ScreenH) 
-                      && !inWhite && !inGrey;
+   assign isBackGround = (x > 0) && (x <= ScreenW) && (y > 0) && (y <= ScreenH) && !isGrey;
    /* Assign Values to color select wires */
 
 
@@ -225,6 +226,12 @@ module TRex(
        red <= 3'b111;
        green <= 3'b111;
        blue <= 2'b11;
+       end
+     else   // defualt 
+     begin
+       red <= 3'b000;
+       green <= 3'b000;
+       blue <= 2'b00;
      end
    end
 

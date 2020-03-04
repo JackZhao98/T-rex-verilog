@@ -1,4 +1,4 @@
-module BackGoundDelegate #(parameter ratio = 1, dx = 30)
+module BackGroundDelegate #(parameter ratio = 1, dx = 30)
         (input wire FrameClk,
          input wire rst,
          input wire [31:0] GroundY,
@@ -14,12 +14,10 @@ module BackGoundDelegate #(parameter ratio = 1, dx = 30)
     assign horizonSEL = 4'b0000;    // 选择画地面
 
     reg [31:0]        Ground_1_X;
-    reg [31:0]        Ground_2_X;
-    reg [11:0]        GroundH;
-    reg [11:0]        GroundW;
+    wire [11:0]        GroundH;
+    wire [11:0]        GroundW;
 
     wire    Ground_1_inGrey;
-    wire    Ground_2_inGrey;
 
 
     /* Move Ground 1 & 2 */
@@ -27,24 +25,21 @@ module BackGoundDelegate #(parameter ratio = 1, dx = 30)
 
         if (rst) begin
             Ground_1_X <= 0;
-            Ground_2_X <= GroundW;
         end
 
-        else if (Ground_1_X + GroundX == 0) begin
-            Ground_1_inGrey <= GroundW;
-        end
-
-        else if (Ground_2_X + GroundX == 0) begin
-            Ground_2_inGrey <= GroundW;
+        else if (Ground_1_X + GroundW == 0) begin
+            Ground_1_X <= GroundW;
         end
 
         else begin
             Ground_1_X <= Ground_1_X - dx;
-            Ground_2_X <= Ground_2_X - dx;
         end
 
     end
-
+    
+    wire Ground1_grey;
+    wire Ground2_grey;
+    
     drawBackGround #(.ratio(ratio))
       horizon1 (.rst(rst),
                 .ox(Ground_1_X),
@@ -52,10 +47,8 @@ module BackGoundDelegate #(parameter ratio = 1, dx = 30)
                 .X(x),
                 .Y(y),
                 .select(horizonSEL),
-                .objectWidth(GroundW),
-                .objectHeight(GroundH),
                 .inGrey(Ground_1_inGrey));
-
+    /*
     drawBackGround #(.ratio(ratio))
       horizon2 (.rst(rst),
                 .ox(Ground_2_X),
@@ -66,7 +59,7 @@ module BackGoundDelegate #(parameter ratio = 1, dx = 30)
                 .objectWidth(GroundW),
                 .objectHeight(GroundH),
                 .inGrey(Ground_2_inGrey));
-
-    assign inGrey = Ground_1_inGrey | Ground_2_inGrey;
+    */
+    assign inGrey = Ground_1_inGrey;
 
 endmodule

@@ -1,8 +1,8 @@
-module ScoreBoardDelegate (
+module ScoreBoardDelegate #(parameter ratio=1)(
 	input wire ScoreClock,
 	input wire rst,
-	input wire [31:0] vgaX,
-	input wire [31:0] vgaY,
+	input wire [10:0] vgaX,
+	input wire [10:0] vgaY,
 	output wire inGrey);
 
 
@@ -24,10 +24,8 @@ module ScoreBoardDelegate (
    wire [31:0]       Num4_x;
    wire [31:0]       Num4_y;
    
-   wire [10:0]       Num_H;
-   wire [10:0]       Num_W;
-   assign Num_W = 20;
-   assign Num_H = 21;
+   localparam Num_W = 20;
+   localparam Num_H = 21;
 
    wire        Num1_inGrey;
    wire        Num2_inGrey;
@@ -64,13 +62,16 @@ module ScoreBoardDelegate (
     else begin
 
    		if (Num4_SEL == 4'd9) begin
+            Num4_SEL <= 0;
    			if (Num3_SEL == 4'd9) begin
+                Num3_SEL <= 0;
    				if (Num2_SEL == 4'd9) begin
+                    Num2_SEL <= 0;
    					if (Num1_SEL == 4'd9) begin
-   					   Num1_SEL <= 4'b0;
-    					   Num2_SEL <= 4'b0;
-    					   Num3_SEL <= 4'b0;
-    					   Num4_SEL <= 4'b0;
+                         Num1_SEL <= 4'b0;
+    					 Num2_SEL <= 4'b0;
+    					 Num3_SEL <= 4'b0;
+    					 Num4_SEL <= 4'b0;
    					end
 
    					else begin
@@ -88,9 +89,9 @@ module ScoreBoardDelegate (
    			else begin
    				Num3_SEL <= Num3_SEL + 1;
    			end
-
+            
    		end  // end if(Num4_SEL == 4'd9)
-
+        
    		else // Num4_SEL < 9, no carry
    			Num4_SEL <= Num4_SEL + 1;
    	end
@@ -100,7 +101,7 @@ module ScoreBoardDelegate (
    drawNumber #(.ratio(ratio))
       Num1 (.rst(rst),
             .ox(Num1_x),
-            .oy(Num1_y)),
+            .oy(Num1_y),
             .X(x),
             .Y(y),
             .select(Num1_SEL),
