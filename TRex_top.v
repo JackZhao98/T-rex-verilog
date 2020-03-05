@@ -5,9 +5,9 @@ module TRexTop(
 	       input wire 	 jumpButton,
 	       output wire 	 Hsync,
 	       output wire 	 Vsync,
-	       output wire [2:0] vgaRed,
-	       output wire [2:0] vgaGreen,
-	       output wire [1:0] vgaBlue);
+	       output reg [2:0] vgaRed,
+	       output reg [2:0] vgaGreen,
+	       output reg [1:0] vgaBlue);
 
    localparam ratio = 1;
    localparam ScreenH = 480;
@@ -113,8 +113,6 @@ module TRexTop(
           .rst(rst),
           .gameState(gameState));
 
-
- 
    // Begin of VGA module
    // Some Constant for VGA module
    // localparam ScreenH = 480;
@@ -152,16 +150,11 @@ module TRexTop(
                           .vgaX(x),
                           .vgaY(y),
                           .inGrey(ScoreBoard_inGrey));
-      
-      
+
       
    wire        dino_inWhite;
    wire        dino_inGrey;
    
-   /*wire [9:0]  dinoX;
-    wire [8:0] dinoY;
-    wire [6:0] DinoH;
-    wire [6:0] DinoW;*/
    TRexDelegate #(.ratio(ratio), .V_init(-10'd99))
       TRD (.rst(rst),
            .animationClk(animateClock),
@@ -195,13 +188,16 @@ module TRexTop(
           .Obs1_W(ObsW),
           .Obs1_H(ObsH));
 
+   collisionDetector #(.GroundY(GroundY))
+       CD (.DinoX(dinoX),
+	   .DinoY(dinoY),
+	   .DinoH(DinoH),
+	   .DinoW(DinoW),
+	   .ObsX(ObsX),
+	   .ObsH(ObsH),
+	   .ObsW(ObsW),
+	   .collided(collided));
    
-
-
-
-   // 关于选择RGB颜色的模块
-   // 希望能好用。。
-
    /* Color Select */
    wire isGrey;
    wire isWhite;
@@ -210,41 +206,32 @@ module TRexTop(
    assign isGrey = dino_inGrey | BackGround_inGrey | ScoreBoard_inGrey;
    assign isWhite = dino_inWhite | obstacle_inWhite;
    assign isBackGround = (x > 0) && (x <= ScreenW) && (y > 0) && (y <= ScreenH) && !isGrey;
+
    /* Assign Values to color select wires */
-
-
-   reg [2:0] red;
-   reg [2:0] green;
-   reg [1:0] blue;
-   
    always @(posedge pixel_clk) begin
      if (isGrey) begin
-       red <= 3'b000;
-       green <= 3'b000;
-       blue <= 2'b00;
+       vgaRed <= 3'b000;
+       vgaGreen <= 3'b000;
+       vgaBlue <= 2'b00;
      end
 
      else if (isWhite) begin
-       red <= 3'b111;
-       green <= 3'b111;
-       blue <= 2'b11;
+       vgaRed <= 3'b111;
+       vgaGreen <= 3'b111;
+       vgaBlue <= 2'b11;
      end
 
      else if (isBackGround) begin
-       red <= 3'b111;
-       green <= 3'b111;
-       blue <= 2'b11;
+       vgaRed <= 3'b111;
+       vgaGreen <= 3'b111;
+       vgaBlue <= 2'b11;
        end
      else   // defualt 
      begin
-       red <= 3'b000;
-       green <= 3'b000;
-       blue <= 2'b00;
+       vgaRed <= 3'b000;
+       vgaGreen <= 3'b000;
+       vgaBlue <= 2'b00;
      end
    end
-
-   assign vgaRed = red;
-   assign vgaGreen = green;
-   assign vgaBlue = blue;
-      
+        
 endmodule // top_vga
