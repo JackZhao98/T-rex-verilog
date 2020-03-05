@@ -2,8 +2,8 @@ module collisionDetector #(parameter GroundY)
    (input wire [10:0] DinoX,
     input wire [8:0] DinoY,
     input wire [6:0] DinoH,
-    input wire [6:0] DinoW,
-    input wire [9:0] ObsX,
+    input wire [7:0] DinoW,
+    input wire [10:0] ObsX,
     input wire [6:0] ObsH,
     input wire [7:0] ObsW
     output wire collided);
@@ -14,27 +14,27 @@ module collisionDetector #(parameter GroundY)
    end
 
    /*  |---- DinoW -----|~~~~~~~~~|
-     DinoX~~~~~~~~~~~~~~^        ObsX */					
+     DinoX~~~~~~~~~~~~~~^        ObsX */
    if (DinoX + DinoW < ObsX) begin
        assign collided = 0;
    end
 
 
    /*  ~~~~ ObsW ~~~~~|---------|
-   	 ObsX			DinoX		*/
+   	 ObsX            DinoX      */
    else if (DinoX > ObsX + ObsW) begin
-       assign collided = 0;	
+       assign collided = 0;
    end
 
    // Horizon overlap
    else if ((DinoX + DinoW >= ObsX) || (DinoX <= ObsX + ObsW)) begin
        
-       assign collided = (DinoY > ObsH + GroundY)? 0:1;   
+       assign collided = (DinoY > ObsH + GroundY)? 0:1;
 
    end
 
    else begin
-   	   assign collided = 0;
+       assign collided = 0;
    end
 
 endmodule
