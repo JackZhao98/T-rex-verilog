@@ -1,52 +1,33 @@
 module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
         (input wire clk,
-         input wire FrameClk,
+         input wire moveClk,
          input wire rst,
-         input wire [31:0] ObstacleY,
-         input wire [31:0] vgaX,
-         input wire [31:0] vgaY,
+         input wire [8:0] ObstacleY,
+         input wire [9:0] vgaX,
+         input wire [8:0] vgaY,
          input wire [1:0] gameState,
          output wire inGrey,
          output wire inWhite,
-         output wire [11:0] Obs1_W,
-         output wire [11:0] Obs1_H,
-         output wire [11:0] Obs2_W,
-         output wire [11:0] Obs2_H,
-         output wire [11:0] Obs3_W,
-         output wire [11:0] Obs3_H);
+         output wire [7:0] Obs1_W,
+         output wire [6:0] Obs1_H);
 
     localparam ScreenW = 640;
     localparam initOffset = 640;
 
     wire Obs1_inGrey;
-    wire Obs2_inGrey;
-    wire Obs3_inGrey;
-
     wire Obs1_inWhite;
-    wire Obs2_inWhite;
-    wire Obs3_inWhite;
 
-    reg [3:0] Obstacle1_SEL;    
-    reg [3:0] Obstacle2_SEL;
-    reg [3:0] Obstacle3_SEL;
+    reg [3:0] Obstacle1_SEL;
 
     wire X1_Released;	/* These are random pulses */
-    wire X2_Released;	/* which generates a random */
-    wire X3_Released;	/* tick in order */
+    //wire X2_Released;	/* which generates a random */
+    //wire X3_Released;	/* tick in order */
 
     reg [31:0] X_1;
-    reg [31:0] X_2;
-    reg [31:0] X_3;
 
     wire X1_inRange;
-    wire X2_inRange;
-    wire X3_inRange;
 
     assign X1_inRange = ((X_1 + Obs1_W) > 0 && X_1 <= ScreenW);
-    assign X2_inRange = ((X_2 + Obs2_W) > 0 && X_2 <= ScreenW);
-    assign X3_inRange = ((X_3 + Obs3_W) > 0 && X_3 <= ScreenW);
-
-    
 
     ClockDivider #(.velocity(1))
     	tempX1 (.clk(clk),
@@ -54,15 +35,13 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
 
 
     /* Generate and move Obs */
-    always @(posedge FrameClk or posedge rst) begin
+    always @(posedge moveClk or posedge rst) begin
         if (rst) begin
             X_1 <= ScreenW + initOffset;
-            X_2 <= ScreenW + initOffset;
-            X_3 <= ScreenW + initOffset;
         end
         else begin
             if (X1_inRange || X1_Released) begin
-                X_1 <= X_1 - dx;
+                X_1 <= X_1 - 1;
             end
             else begin
                 X_1 <= ScreenW;    
@@ -73,7 +52,7 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
     end
 
     
-  /*  drawObstacle obs1 (
+    drawObstacle obs1 (
         .rst(rst),
         .ox(X_1),
         .oy(ObstacleY),
@@ -83,7 +62,7 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
         .objectWidth(Obs1_W),
         .objectHeight(Obs1_H),
         .inWhite(Obs1_inWhite),
-        .inGrey(Obs1_inGrey));*/
+        .inGrey(Obs1_inGrey));
     
     /*drawObstacle obs2 (
         .rst(rst),
@@ -110,7 +89,7 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
         .inGrey(Obs3_inGrey));*/
 
 
-    assign inGrey = Obs1_inGrey | Obs2_inGrey | Obs3_inGrey;
-    assign inWhite = Obs1_inWhite | Obs2_inWhite | Obs3_inWhite;
+    assign inGrey = Obs1_inGrey;
+    assign inWhite = Obs1_inWhite;
 
 endmodule

@@ -14,7 +14,6 @@ module TRexDelegate #(parameter ratio=1, V_init = -10'd30)(
     output wire inGrey,
     output wire inWhite);
 	
-
     reg [10:0]	DinoX;
     reg [10:0]	DinoY;
     wire [11:0]	DinoH;
@@ -29,7 +28,7 @@ module TRexDelegate #(parameter ratio=1, V_init = -10'd30)(
     wire	isDead;
 
     
-    assign onGround = (DinoY == GroundY)? 1:0;
+    assign onGround = (DinoY >= 300)? 1:0;
     assign Airborne = ~onGround;
     assign isDuck = duck;
 
@@ -37,79 +36,52 @@ module TRexDelegate #(parameter ratio=1, V_init = -10'd30)(
     wire	dino_inGrey;
     wire [3:0]	dinoSEL;
     localparam g = 4 ;
-
-
+	 
    /*
       Dino Movement
    */
-   reg [5:0] h;
-   reg [5:0] local_V;
+   reg [10:0] V;
+	reg jumping;
+	
+	initial begin
+	    DinoX = defaultX;
+		 DinoY = 300;
+		 V = 11'b0;
+	end	
+	
    /* Gravity Module */
     always @(posedge FrameClk) begin
-        if (onGround && jump) begin
-            local_V <= 32;
-        end
-        else if (local_V != 0 && onGround) 
-            local_V <= 0;
-        else begin
-            if (onGround)
-                local_V <= local_V;
-            else
-                local_V <= local_V - g;
-        end
+        if (jump && onGround) begin
+			   jumping <= 1;
+				V <= -11'd20;
+		  end
+		  else if (jumping) begin
+				if (onGround && V > 0)
+					jumping <= 1'b0;
+				else begin
+					V <= V + g;
+				end
+		  end
+		  else
+		      V <= 11'b0;
     end
     
     always @(posedge FrameClk or posedge rst) begin
         if (rst) begin
             DinoX <= defaultX;
             DinoY <= GroundY;
+				jumping <= 0;
         end
-
-        /*else if (jump && onGround) begin
-        end*/
-
-        else if (/*local_V > 0 && */Airborne || local_V  != 0) begin
-            if (local_V  >= 0) begin
-                DinoY <= DinoY - local_V; 
-            end
-            else
-                DinoY <= DinoY + (~local_V+1);
-            DinoX <= defaultX;
-        end
-
-        else begin
-            DinoX <= defaultX;
-            DinoY <= GroundY;
-        end
-           
-    end
-    /*always @(posedge FrameClk or posedge rst) begin
-        if (rst) begin
-            DinoX <= defaultX;
-            DinoY <= GroundY;
-            V <= 0;
-        end
-        
-        else if (onGround && jump) begin
-            //$display("onGround && jump\n");
-            V <= -11'd30;
-        end
-        
-        else if (Airborne) begin
-            //$display("onGround && jump\n");
-            V <= V + g;
-        end 
-        
-        else if (V >= 11'd30) begin
-            //$display("onGround && jump\n");
-            V <= 0;
-        end
-        
-        else begin
-            DinoY <= DinoY + V;
-        end
-    
-    end*/
+        else if(jumping) begin
+				if (V & 11'h400 == 1)
+					DinoY <= DinoY - ((~V) + 1);
+				else
+					DinoY <= DinoY + V;
+			end
+			else
+				DinoY <= GroundY;
+		end
+  
 
     DinoFSM fsm(
         .rst(rst),

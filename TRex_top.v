@@ -8,7 +8,7 @@ module TRexTop(
 	       output reg [2:0] vgaRed,
 	       output reg [2:0] vgaGreen,
 	       output reg [1:0] vgaBlue,
-           output wire led);
+          output wire led);
 
    localparam ratio = 1;
    localparam ScreenH = 480;
@@ -32,6 +32,7 @@ module TRexTop(
    wire  animateClock;  // controls the animation of dino's foot step, and bird wings
    wire  ScoreClock;    // Speed of Score coutner (1s = 10 points)
    wire  Frame_Clk;     // 60 FPS
+	wire  moveClk;
 
    wire  rst;
    wire  jump;
@@ -54,11 +55,6 @@ module TRexTop(
    ClockDivider #(.velocity(4))   
       animateClk (.clk(clk),
                   .speed(animateClock));
-
-   // wire 			 ObstacleClock;
-   // ClockDivider #(.velocity(100))
-   //    ObstacleClk (.clk(clk),
-   //                 .speed(ObstacleClock));
    
    ClockDivider #(.velocity(10))  // Period = 0.1s
       ScoreClkv (.clk(clk),
@@ -67,7 +63,11 @@ module TRexTop(
    ClockDivider #(.velocity(30))  // Period = 0.1s
       FPSClk (.clk(clk),
                  .speed(Frame_Clk));
-
+					  
+	ClockDivider #(.velocity(100))
+		MoveClk (.clk(clk),
+				   .speed(moveClk));
+	
    // Begin of Debouncer Module
 
    // wire       rst;
@@ -106,17 +106,17 @@ module TRexTop(
       10 - Dead State:
            The game is frozen, dead dino and game over msg displayed.
       
-      (10 - restart -)-> 00 -- Jump ----> 01 ------- Collided ---> 10 (Dead)
+      (01 - restart -)-> 00 -- Jump ----> 10 ------- Collided ---> 01 (Dead)
                                      ^          |
                                      |          |
                                      |_!Collide_|
    */ 
-   wire [1:0] gameState;
+   wire [1:0] gameState;	// wire[1] is run;
 
    GameDelegate gameFSM(
           .clk(clk),
           .rst(rst),
-          .gameState(gameState));
+          .state(gameState));
 
    // Begin of VGA module
    // Some Constant for VGA module
@@ -137,8 +137,7 @@ module TRexTop(
    wire 			 BackGround_inGrey;
 
    BackGroundDelegate #(.ratio(ratio), .dx(dx))
-       BGD (.clk(clk),
-            .FrameClk(Frame_Clk),
+       BGD (.moveClk(moveClk),
             .rst(rst),
             .GroundY(GroundY),
             .vgaX(x),
@@ -154,6 +153,7 @@ module TRexTop(
                           .rst(rst),
                           .vgaX(x),
                           .vgaY(y),
+								  .gameState(gameState),
                           .inGrey(ScoreBoard_inGrey));
 
       
@@ -182,7 +182,7 @@ module TRexTop(
    
    ObstaclesDelegate #(.ratio(ratio), .dx(dx))
       OD (.clk(clk),
-          .FrameClk(Frame_Clk),
+          .moveClk(moveClk),
           .rst(rst),
           .ObstacleY(GroundY),
           .vgaX(x),
@@ -192,16 +192,8 @@ module TRexTop(
           .inWhite(obstacle_inWhite),
           .Obs1_W(ObsW),
           .Obs1_H(ObsH));
-
-   /*collisionDetector #(.GroundY(GroundY))
-       CD (.DinoX(dinoX),
-	   .DinoY(dinoY),
-	   .DinoH(DinoH),
-	   .DinoW(DinoW),
-	   .ObsX(ObsX),
-	   .ObsH(ObsH),
-	   .ObsW(ObsW),
-	   .collided(collided));*/
+			 
+   assign collided = ((dinoX + DinoW >= ObsX) && (dinoX <= ObsX + ObsW))? (dinoY <= ObsH + GroundY):0;
    
    /* Color Select */
    wire isGrey;
@@ -240,4 +232,5 @@ module TRexTop(
    end
    
    assign led = Frame_Clk;
+	
 endmodule // top_vga

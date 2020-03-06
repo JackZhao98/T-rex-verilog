@@ -12,7 +12,9 @@ module collisionDetector #(parameter GroundY)
    initial begin
        assign collided = 0;
    end
-
+	
+	//assign collided = ((DinoX + DinoW >= ObsX) && (DinoX <= ObsX + ObsW))? (DinoY <= ObsH + GroundY):0;
+	
    /*  |---- DinoW -----|~~~~~~~~~|
      DinoX~~~~~~~~~~~~~~^        ObsX */
    if (DinoX + DinoW < ObsX) begin
