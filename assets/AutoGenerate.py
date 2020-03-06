@@ -32,7 +32,7 @@ def AnalyzerInit(fileName):
 	print("wire inGrey_" + obj + ";")
 	print("wire inBlank_" + obj + ";")
 	print("wire inWhite_" + obj + ";\n")
-	print("assign inHitBox_" + obj + " = (X > ox) && (X <= " + obj + "Width) && (Y > oy) && (Y <= "+ obj + "Height);\n" )
+	print("assign inHitBox_" + obj + " = (X > ox) && (X <= " + obj + "Width * px) && (Y < oy) && (Y >= oy - "+ obj + "Height * px);\n" )
 
 def AnalyzerEnd(fileName):
 	obj = fileName.split('/')[1].split('.')[0]
