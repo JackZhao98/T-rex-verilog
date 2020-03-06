@@ -15,8 +15,8 @@
 module drawBackGround#(parameter ratio = 1)
 	(
 	    input  wire        rst,
-	    input  wire [10:0] ox,
-	    input  wire [10:0] oy,
+	    input  wire [11:0] ox,
+	    input  wire [11:0] oy,
 	    input  wire [10:0] X,
 	    input  wire [10:0] Y,
 	    input  wire [3:0]  select,	// Select Pattern

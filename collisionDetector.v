@@ -5,8 +5,8 @@ module collisionDetector #(parameter GroundY)
     input wire [7:0] DinoW,
     input wire [10:0] ObsX,
     input wire [6:0] ObsH,
-    input wire [7:0] ObsW
-    output wire collided);
+    input wire [7:0] ObsW,
+    output wire collided );
 
 
    initial begin

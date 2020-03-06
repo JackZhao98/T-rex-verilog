@@ -7,7 +7,8 @@ module TRexTop(
 	       output wire 	 Vsync,
 	       output reg [2:0] vgaRed,
 	       output reg [2:0] vgaGreen,
-	       output reg [1:0] vgaBlue);
+	       output reg [1:0] vgaBlue,
+           output wire led);
 
    localparam ratio = 1;
    localparam ScreenH = 480;
@@ -36,7 +37,7 @@ module TRexTop(
    wire  jump;
    wire  duck;
 
-   localparam dx = 4'd5;
+   localparam dx = 5'd30;
    // Initial assignments
    assign GroundY = ScreenH - (ScreenH >> 2);   // Ground Y coordinate assignment
    // 640 - 160 = 480 --> Bottom 25 %
@@ -62,6 +63,10 @@ module TRexTop(
    ClockDivider #(.velocity(10))  // Period = 0.1s
       ScoreClkv (.clk(clk),
                  .speed(ScoreClock));
+   
+   ClockDivider #(.velocity(30))  // Period = 0.1s
+      FPSClk (.clk(clk),
+                 .speed(Frame_Clk));
 
    // Begin of Debouncer Module
 
@@ -124,7 +129,6 @@ module TRexTop(
            .rst(rst),
            .Hsync(Hsync),
            .Vsync(Vsync),
-           .FPSClk(Frame_Clk),
            .X(x),
            .Y(y));
 
@@ -133,7 +137,8 @@ module TRexTop(
    wire 			 BackGround_inGrey;
 
    BackGroundDelegate #(.ratio(ratio), .dx(dx))
-       BGD (.FrameClk(Frame_Clk),
+       BGD (.clk(clk),
+            .FrameClk(Frame_Clk),
             .rst(rst),
             .GroundY(GroundY),
             .vgaX(x),
@@ -155,7 +160,7 @@ module TRexTop(
    wire        dino_inWhite;
    wire        dino_inGrey;
    
-   TRexDelegate #(.ratio(ratio), .V_init(-10'd99))
+   TRexDelegate #(.ratio(ratio), .V_init(-10'd30))
       TRD (.rst(rst),
            .animationClk(animateClock),
            .FrameClk(Frame_Clk),
@@ -188,7 +193,7 @@ module TRexTop(
           .Obs1_W(ObsW),
           .Obs1_H(ObsH));
 
-   collisionDetector #(.GroundY(GroundY))
+   /*collisionDetector #(.GroundY(GroundY))
        CD (.DinoX(dinoX),
 	   .DinoY(dinoY),
 	   .DinoH(DinoH),
@@ -196,7 +201,7 @@ module TRexTop(
 	   .ObsX(ObsX),
 	   .ObsH(ObsH),
 	   .ObsW(ObsW),
-	   .collided(collided));
+	   .collided(collided));*/
    
    /* Color Select */
    wire isGrey;
@@ -209,16 +214,16 @@ module TRexTop(
 
    /* Assign Values to color select wires */
    always @(posedge pixel_clk) begin
-     if (isGrey) begin
-       vgaRed <= 3'b000;
-       vgaGreen <= 3'b000;
-       vgaBlue <= 2'b00;
-     end
-
-     else if (isWhite) begin
+     if (isWhite) begin
        vgaRed <= 3'b111;
        vgaGreen <= 3'b111;
        vgaBlue <= 2'b11;
+     end
+
+     else if (isGrey) begin
+       vgaRed <= 3'b000;
+       vgaGreen <= 3'b000;
+       vgaBlue <= 2'b00;
      end
 
      else if (isBackGround) begin
@@ -233,5 +238,6 @@ module TRexTop(
        vgaBlue <= 2'b00;
      end
    end
-        
+   
+   assign led = Frame_Clk;
 endmodule // top_vga
