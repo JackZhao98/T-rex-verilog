@@ -1,6 +1,7 @@
 module ScoreBoardDelegate #(parameter ratio=1)(
 	input wire ScoreClock,
 	input wire rst,
+    input wire [1:0] gameState,
 	input wire [10:0] vgaX,
 	input wire [10:0] vgaY,
 	output wire inGrey);
@@ -60,40 +61,45 @@ module ScoreBoardDelegate #(parameter ratio=1)(
    	end
 
     else begin
+        case (gameState)
+        2'b10: begin
+            if (Num4_SEL == 4'd9) begin
+                Num4_SEL <= 0;
+                if (Num3_SEL == 4'd9) begin
+                    Num3_SEL <= 0;
+                    if (Num2_SEL == 4'd9) begin
+                        Num2_SEL <= 0;
+                        if (Num1_SEL == 4'd9) begin
+                             Num1_SEL <= 4'b0;
+                             Num2_SEL <= 4'b0;
+                             Num3_SEL <= 4'b0;
+                             Num4_SEL <= 4'b0;
+                        end
 
-   		if (Num4_SEL == 4'd9) begin
-            Num4_SEL <= 0;
-   			if (Num3_SEL == 4'd9) begin
-                Num3_SEL <= 0;
-   				if (Num2_SEL == 4'd9) begin
-                    Num2_SEL <= 0;
-   					if (Num1_SEL == 4'd9) begin
-                         Num1_SEL <= 4'b0;
-    					 Num2_SEL <= 4'b0;
-    					 Num3_SEL <= 4'b0;
-    					 Num4_SEL <= 4'b0;
-   					end
-
-   					else begin
-   						Num1_SEL <= Num1_SEL + 1;
-   					end
-
-   				end
-
-   				else begin
-   					Num2_SEL <= Num2_SEL + 1;
-   				end
-
-   			end
-
-   			else begin
-   				Num3_SEL <= Num3_SEL + 1;
-   			end
+                        else begin
+                            Num1_SEL <= Num1_SEL + 1;
+                        end
+                    end
+                    else begin
+                        Num2_SEL <= Num2_SEL + 1;
+                    end
+                end
+                else begin
+                    Num3_SEL <= Num3_SEL + 1;
+                end           
+            end  // end if(Num4_SEL == 4'd9)
             
-   		end  // end if(Num4_SEL == 4'd9)
-        
-   		else // Num4_SEL < 9, no carry
-   			Num4_SEL <= Num4_SEL + 1;
+            else // Num4_SEL < 9, no carry
+                Num4_SEL <= Num4_SEL + 1;
+          end
+          
+          2'b00: begin
+            Num1_SEL <= 4'b0;
+            Num2_SEL <= 4'b0;
+            Num3_SEL <= 4'b0;
+            Num4_SEL <= 4'b0;
+          end
+        endcase
    	end
 
    end

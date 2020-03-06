@@ -12,7 +12,7 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
          output wire [6:0] Obs1_H);
 
     localparam ScreenW = 640;
-    localparam initOffset = 640;
+    localparam initOffset = 40;
 
     wire Obs1_inGrey;
     wire Obs1_inWhite;
@@ -23,7 +23,7 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
     //wire X2_Released;	/* which generates a random */
     //wire X3_Released;	/* tick in order */
 
-    reg [31:0] X_1;
+    reg signed [10:0] X_1;
 
     wire X1_inRange;
 
@@ -40,12 +40,19 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
             X_1 <= ScreenW + initOffset;
         end
         else begin
-            if (X1_inRange || X1_Released) begin
-                X_1 <= X_1 - 1;
+            case (gameState)
+            
+            2'b10: begin
+                if (X1_inRange || X1_Released) begin
+                    X_1 <= X_1 - 1;
+                end
+                else begin
+                    X_1 <= ScreenW;    
+                end
             end
-            else begin
-                X_1 <= ScreenW;    
-            end
+            default:
+                X_1 <= X_1;
+            endcase
 
         end
             
@@ -63,30 +70,7 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
         .objectHeight(Obs1_H),
         .inWhite(Obs1_inWhite),
         .inGrey(Obs1_inGrey));
-    
-    /*drawObstacle obs2 (
-        .rst(rst),
-        .ox(X_2),
-        .oy(ObstacleY),
-        .X(vgaX),
-        .Y(vgaY),
-        .select(Obstacle2_SEL),
-        .objectWidth(Obs2_W),
-        .objectHeight(Obs2_H),
-        .inWhite(Obs2_inWhite),
-        .inGrey(Obs2_inGrey));
 
-    drawObstacle obs3 (
-        .rst(rst),
-        .ox(X_3),
-        .oy(ObstacleY),
-        .X(vgaX),
-        .Y(vgaY),
-        .select(Obstacle3_SEL),
-        .objectWidth(Obs3_W),
-        .objectHeight(Obs3_H),
-        .inWhite(Obs3_inWhite),
-        .inGrey(Obs3_inGrey));*/
 
 
     assign inGrey = Obs1_inGrey;

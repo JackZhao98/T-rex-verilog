@@ -1,16 +1,15 @@
 module GameDelegate(
 		    input wire clk,
 		    input wire rst,
-			 input wire jump,
-			 input wire collided,
+			input wire jump,
+			input wire collided,
 		    output reg [1:0] state);
 
   localparam InitState = 2'b00;
   localparam InGameState = 2'b10;
-  //localparam PrepareState = 2'b10;
   localparam DeadState = 2'b01;
   
-  always @(posedge clk) begin		
+  always @(posedge clk) begin  
 		case (state)
 		InitState: begin
 			if (jump)
@@ -36,7 +35,5 @@ module GameDelegate(
 			state = InitState;
 		endcase
   end
-
-  assign gameState = state;
 
 endmodule // gameDelegate

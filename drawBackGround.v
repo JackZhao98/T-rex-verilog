@@ -15,9 +15,9 @@
 module drawBackGround#(parameter ratio = 1)
 	(
 	    input  wire        rst,
-	    input  wire [10:0] ox,      // Object Origin
+	    input  wire [11:0] ox,      // Object Origin
 	    input  wire [8:0]  oy,
-	    input  wire [9:0]  X,        // VGA Scanner
+	    input  wire [10:0]  X,        // VGA Scanner
 	    input  wire [8:0]  Y,
 	    input  wire [3:0]  select,	// Select Pattern
 	    output reg  [7:0]  objectWidth,

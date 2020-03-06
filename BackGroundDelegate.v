@@ -31,19 +31,38 @@ module BackGroundDelegate #(parameter ratio = 1, dx = -6'd20)
             Ground_2_X <= GroundW;
         end
         
-        else if (Ground_1_X == (~GroundW + 1)) begin
-            Ground_1_X <= GroundW - 1;
-				Ground_2_X <= Ground_2_X - 1;
-        end
-
-        else if (Ground_2_X == (~GroundW + 1)) begin
-				Ground_2_X <= GroundW - 1;
-				Ground_1_X <= Ground_1_X - 1;
-        end
-            
         else begin
-            Ground_1_X <= Ground_1_X - 1;
-            Ground_2_X <= Ground_2_X - 1;
+            case (gameState)
+                2'b00: begin
+                    Ground_1_X <= 0;
+                    Ground_2_X <= GroundW;
+                end
+                2'b10: begin
+                    if (Ground_1_X == (~GroundW + 1)) begin
+                        Ground_1_X <= GroundW - 1;
+                        Ground_2_X <= Ground_2_X - 1;
+                    end
+
+                    else if (Ground_2_X == (~GroundW + 1)) begin
+                        Ground_2_X <= GroundW - 1;
+                        Ground_1_X <= Ground_1_X - 1;
+                    end
+                        
+                    else begin
+                        Ground_1_X <= Ground_1_X - 1;
+                        Ground_2_X <= Ground_2_X - 1;
+                    end
+                
+                end
+                2'b01: begin
+                    Ground_1_X <= Ground_1_X;
+                    Ground_2_X <= Ground_2_X;
+                end
+                default: begin
+                    Ground_1_X <= 0;
+                    Ground_2_X <= GroundW;
+                end
+            endcase
         end
     end
     
@@ -52,18 +71,18 @@ module BackGroundDelegate #(parameter ratio = 1, dx = -6'd20)
     // Change ox oy to 12 bit here!
     drawBackGround #(.ratio(ratio))
       horizon1 (.rst(rst),
-                .ox(Ground_1_X),
+                .ox(Ground_1_X + 1200),
                 .oy(GroundY - groundDisplayOffset),
-                .X(vgaX),
+                .X(vgaX + 1200),
                 .Y(vgaY),
                 .select(horizonSEL1),
                 .inGrey(Ground_1_inGrey));
 
     drawBackGround #(.ratio(ratio))
       horizon2 (.rst(rst),
-                .ox(Ground_2_X),
+                .ox(Ground_2_X + 1200),
                 .oy(GroundY - groundDisplayOffset),
-                .X(vgaX),
+                .X(vgaX + 1200),
                 .Y(vgaY),
                 .select(horizonSEL2),
                 .inGrey(Ground_2_inGrey));
