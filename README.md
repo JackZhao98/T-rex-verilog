@@ -1,10 +1,10 @@
 # TRex with FPGA in Verilog
 ## Game Management Modules
 
-#### TRex_top
+### TRex_top
 This is the top module of the entire project. The module takes raw inputs from the Nexys3 FPGA board including four buttons and generates proper output signals to VGA and some led indicators. <br>
 
-```
+```verilog
 module TRexTop(
     input wire          clk,
     input wire          btnR, // Reset button
@@ -22,7 +22,7 @@ module TRexTop(
 
 
 ## Graphic Modules
-#### VGA
+### VGA
  -  Input: clk (100MHz Master Clock) <br>
 	   pixel_clk (25MHz pixel clock) <br>
 	   rst (reset) <br>
@@ -36,11 +36,11 @@ module TRexTop(
 	   [9:0]x (Current X coordinate) <br>
 	   [8:0]y (Current Y coordinate) <br>
 
-#### vgaClk (Clock divider, generate a 25MHz clock rate for pixel update)
+### vgaClk (Clock divider, generate a 25MHz clock rate for pixel update)
  - Input: clk (100MHz Master Clock)
  - Output: pix_clk (25MHz clock signal)
 
-#### Multi-functional Clock Divider
+### Multi-functional Clock Divider
 - Input: clk (100MHz Master Clock)
 This module takes a parameter in order to output different clock frequencies. 
 ```verilog
@@ -48,9 +48,10 @@ module ClockDivider#(parameter velocity = 1)
 ```
 The parameter `velocity` represents the clock pulse freqency in Hertz, i.e. "how many pulses in one second"
 
-#### 
+## Helper program
 
 ### Automatic graphing script
-![TRex Default](https://miro.medium.com/max/600/0*9U_PkckAUtKGrb_R.png)
+[![TRex Default]
+(https://miro.medium.com/max/600/0*9U_PkckAUtKGrb_R.png)]
 
 
