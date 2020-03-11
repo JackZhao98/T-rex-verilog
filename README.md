@@ -24,11 +24,11 @@ Game management finite state machine. There are totally three states:
 00, 01 and 10 representing the initial state, in game state, dead state respectively. 
 
 ```
--> 00 -- Jump ----> 10 ------- Collided ---> 01 (Dead)
-               ^          |
-               |          |
-               |_!Collide_|
-
+--> 00 -- Jump ----> 10 ------- Collided ---> 01 (Dead)
+                ^          |
+                |          |
+                |__________|
+                  !Collide
 ```
 - Initial state: Objects are rest to their initial position, TRex is reset to the default pattern, and score is cleared to zero.
 - In game state: Objects start to move at a specified game speed, score starts to increment. TRex has normal animation (refer to chrome://dino)
