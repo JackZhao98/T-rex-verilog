@@ -129,7 +129,7 @@ In order to draw some graphics on the screen, we chose the most straight forward
 
 However, the actual image is really complicated to express in boolean statements because the pixel-style dinosaur and objects have no smooth edges. So I wrote a python script to read every pixel value in game sprite images and genreate verilog codes that represent each pattern correspondingly. I also updated the script after the first version which is able to read all images from different folders (each folder is a module) and generate the complete verilog module code automatically.
 
-#### even further...
+### even further...
 Furthermore, I wrote an `auto.sh` shell script to run the python script above recursively under current directory.
 ```shell
 files=$(find . -type d -regex '\./[A-Za-z]*')
@@ -141,6 +141,6 @@ done;
 ```
 
 ### Final Preview
-The final version may look like this...
-![demo_1](/assets/demo_1.gif)
+The final version may look like this...<br>
+[<img src="/assets/demo_1.gif">]
 
