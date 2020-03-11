@@ -1,16 +1,16 @@
 module TRexTop(
-	       input wire 	    clk,
-	       input wire 	    btnR, // Reset button
-	       input wire 	    duckButton,
-	       input wire 	    jumpButton,
-	       output wire 	    Hsync,
-	       output wire 	    Vsync,
+	       input wire 	clk,
+	       input wire 	btnR, // Reset button
+	       input wire 	duckButton,
+	       input wire 	jumpButton,
+	       output wire 	Hsync,
+	       output wire 	Vsync,
 	       output reg [2:0] vgaRed,
 	       output reg [2:0] vgaGreen,
 	       output reg [1:0] vgaBlue,
-         output wire 	    led,
-         output wire 	    run,
-         output wire 	    dead);
+               output wire 	led,
+               output wire 	run,
+               output wire 	dead);
 
    localparam ratio = 1;
    localparam ScreenH = 480;
