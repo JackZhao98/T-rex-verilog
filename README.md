@@ -144,4 +144,5 @@ done;
 The final version may look like this...<br>
 ![demo][demo_1]
 
-[demo_1] : /assets/demo_1.gif "Preview"
+[demo_1]:/assets/demo_1.gif "Preview"
+[default_dino]:https://miro.medium.com/max/600/0*9U_PkckAUtKGrb_R.png
