@@ -125,7 +125,7 @@ The parameter `velocity` represents the clock pulse freqency in Hertz, i.e. "how
 
 In order to draw some graphics on the screen, we chose the most straight forward way: depict the region of each color. For this specific project, the objects are in solid grey, so that seems easier to "draw".
 
-[![TRex Default] (https://miro.medium.com/max/600/0*9U_PkckAUtKGrb_R.png)]
+![TRex Default] [default_dino]
 
 However, the actual image is really complicated to express in boolean statements because the pixel-style dinosaur and objects have no smooth edges. So I wrote a python script to read every pixel value in game sprite images and genreate verilog codes that represent each pattern correspondingly. I also updated the script after the first version which is able to read all images from different folders (each folder is a module) and generate the complete verilog module code automatically.
 
@@ -142,5 +142,8 @@ done;
 
 ### Final Preview
 The final version may look like this...<br>
-[<img src="/assets/demo_1.gif">]
+![demo] [demo_1]
+
+[demo_1] =  /assets/demo_1.gif "Preview"
+[default_dino] = https://miro.medium.com/max/600/0*9U_PkckAUtKGrb_R.png
 
