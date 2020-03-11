@@ -1,16 +1,16 @@
 module TRexTop(
-	       input wire 	clk,
-	       input wire 	btnR, // Reset button
-	       input wire 	duckButton,
-	       input wire 	jumpButton,
-	       output wire 	Hsync,
-	       output wire 	Vsync,
+	       input wire 	    clk,
+	       input wire 	    btnR, // Reset button
+	       input wire 	    duckButton,
+	       input wire 	    jumpButton,
+	       output wire 	    Hsync,
+	       output wire 	    Vsync,
 	       output reg [2:0] vgaRed,
 	       output reg [2:0] vgaGreen,
 	       output reg [1:0] vgaBlue,
-               output wire 	led,
-               output wire 	run,
-               output wire 	dead);
+         output wire 	    led,
+         output wire 	    run,
+         output wire 	    dead);
 
    localparam ratio = 1;
    localparam ScreenH = 480;
@@ -34,7 +34,7 @@ module TRexTop(
    wire  animateClock;  // controls the animation of dino's foot step, and bird wings
    wire  ScoreClock;    // Speed of Score coutner (1s = 10 points)
    wire  Frame_Clk;     // 60 FPS
-	wire  moveClk;
+	 wire  moveClk;
 
    wire  rst;
    wire  jump;

@@ -3,9 +3,9 @@ module VGA(
 	   input wire 	      rst,   //asynchronous reset
 	   output wire 	      Hsync, //horizontal sync out
 	   output wire 	      Vsync, //vertical sync out
-     output wire        FPSClk,
-	   output wire [9:0] X,     // X counter coordinate
-	   output wire [8:0] Y      // Y counter Coordinate
+       output wire        FPSClk,
+	   output wire [9:0]  X,     // X counter coordinate
+	   output wire [8:0]  Y      // Y counter Coordinate
      );                        
 
    /**********************
@@ -15,71 +15,71 @@ module VGA(
     * 0                  *
     *        640         *
     * *******************/
-// video structure constants
-parameter hpixels = 800;// horizontal pixels per line
-parameter vlines = 521; // vertical lines per frame
-parameter hpulse = 96;  // Hsync pulse length
-parameter vpulse = 2;   // Vsync pulse length
-parameter hbp = 144;  // end of horizontal back porch
-parameter hfp = 784;  // beginning of horizontal front porch
-parameter vbp = 31;     // end of vertical back porch
-parameter vfp = 511;  // beginning of vertical front porch
-// active horizontal video is therefore: 784 - 144 = 640
-// active vertical video is therefore: 511 - 31 = 480
+	// video structure constants
+	parameter hpixels = 800;// horizontal pixels per line
+	parameter vlines = 521; // vertical lines per frame
+	parameter hpulse = 96;  // Hsync pulse length
+	parameter vpulse = 2;   // Vsync pulse length
+	parameter hbp = 144;  // end of horizontal back porch
+	parameter hfp = 784;  // beginning of horizontal front porch
+	parameter vbp = 31;     // end of vertical back porch
+	parameter vfp = 511;  // beginning of vertical front porch
+	// active horizontal video is therefore: 784 - 144 = 640
+	// active vertical video is therefore: 511 - 31 = 480
 
-// graphic parameter (top-left is (0, 0))
+	// graphic parameter (top-left is (0, 0))
 
-localparam screen_width = hfp - hbp;
-localparam screen_height = vfp - vbp;
+	localparam screen_width = hfp - hbp;
+	localparam screen_height = vfp - vbp;
 
-// registers for storing the horizontal & vertical counters
-reg [9:0] hc;
-reg [9:0] vc;
+	// registers for storing the horizontal & vertical counters
+	reg [9:0] hc;
+	reg [9:0] vc;
 
-// Horizontal & vertical counters --
-// this is how we keep track of where we are on the screen.
-// ------------------------
-// Sequential "always block", which is a block that is
-// only triggered on signal transitions or "edges".
-// posedge = rising edge  &  negedge = falling edge
-// Assignment statements can only be used on type "reg" and need to be of the "non-blocking" type: <=
+	// Horizontal & vertical counters --
+	// this is how we keep track of where we are on the screen.
+	// ------------------------
+	// Sequential "always block", which is a block that is
+	// only triggered on signal transitions or "edges".
+	// posedge = rising edge  &  negedge = falling edge
+	// Assignment statements can only be used on type "reg" and need to be of the "non-blocking" type: <=
 
-always @(posedge pixel_clock or posedge rst)
-begin
-  // reset condition
-  if (rst == 1)
-  begin
-    hc <= 0;
-    vc <= 0;
-  end
-  else
-  begin
-    // keep counting until the end of the line
-    if (hc < hpixels - 1)
-      hc <= hc + 1;
-    else
-    // When we hit the end of the line, reset the horizontal
-    // counter and increment the vertical counter.
-    // If vertical counter is at the end of the frame, then
-    // reset that one too.
-    begin
-      hc <= 0;
-      if (vc < vlines - 1)
-        vc <= vc + 1;
-      else
-        vc <= 0;
-    end
-    
-  end
-end
+	always @(posedge pixel_clock or posedge rst)
+	begin
+	  // reset condition
+	  if (rst == 1)
+	  begin
+	    hc <= 0;
+	    vc <= 0;
+	  end
+	  else
+	  begin
+	    // keep counting until the end of the line
+	    if (hc < hpixels - 1)
+	      hc <= hc + 1;
+	    else
+	    // When we hit the end of the line, reset the horizontal
+	    // counter and increment the vertical counter.
+	    // If vertical counter is at the end of the frame, then
+	    // reset that one too.
+	    begin
+	      hc <= 0;
+	      if (vc < vlines - 1)
+	        vc <= vc + 1;
+	      else
+	        vc <= 0;
+	    end
+	    
+	  end
+	end
 
-assign Hsync = (hc < hpulse) ? 0:1;
-assign Vsync = (vc < vpulse) ? 0:1;
+	assign Hsync = (hc < hpulse) ? 0:1;
+	assign Vsync = (vc < vpulse) ? 0:1;
 
-assign X = (hc >= hbp)? (hc-hbp):0;
-assign Y = (vc >= vbp)? (vc -vbp):0;
+	assign X = (hc >= hbp)? (hc-hbp):0;
+	assign Y = (vc >= vbp)? (vc -vbp):0;
 
-assign FPSClk = ((hc == hpixels) & (vc == screen_height - 1));
+	assign FPSClk = ((hc == hpixels) & (vc == screen_height - 1));
 
 endmodule
 
