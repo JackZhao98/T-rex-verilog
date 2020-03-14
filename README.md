@@ -1,7 +1,7 @@
 # TRex with FPGA in Verilog
 ## FPGA?
 A field-programmable gate array (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing – hence the term "field-programmable". The FPGA configuration is generally specified using a hardware description language (HDL), similar to that used for an application-specific integrated circuit (ASIC). Circuit diagrams were previously used to specify the configuration, but this is increasingly rare due to the advent of electronic design automation tools. <br>
-![fpga|200x200][fpga_img]
+![fpga][fpga_img|300x300]
 
 ## This project
 This project aims to implement Google Chrome's TRex mini game to FPGA board with the Verilog programming language. The goal is to mimick the game mechanism, graphics, and game rules, etc, as close as possible compared to the original version. We will utilize only three buttons on the board as the raw user input, and output to a 640x480 60FPS display through the VGA port. Due to the limitation of port numbers on Nexys3, we might encounter problems that are caused by the actual hardware, therefore, some unnecessary features or relatively insignificant modules might be cut off in order to decrease the total hardware resource used by the program.
@@ -157,8 +157,8 @@ This is what the final version looks like <br>
 
 [demo_1]:/assets/demo_1.gif "Preview"
 [final_preview]:/assets/final_preview.gif "Final preview"
-[duck_dino]:/assets/duck_dino.HEIC
-[dead_dino]:/assets/dead_dino.HEIC
-[fpga_img]:/assets/fpga.jpg "Xlinx Nexys3 FPGA"
+[duck_dino]:/assets/duck_dino.jpg
+[dead_dino]:/assets/dead_dino.jpg
+[fpga_img|300x300]:/assets/fpga.jpg "Xlinx Nexys3 FPGA"
 
 [default_dino]:https://miro.medium.com/max/600/0*9U_PkckAUtKGrb_R.png
