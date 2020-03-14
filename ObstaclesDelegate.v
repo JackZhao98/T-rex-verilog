@@ -9,26 +9,25 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
          output wire inGrey,
          output wire inWhite,
          output wire [7:0] Obs1_W,
-         output wire [6:0] Obs1_H);
-
-    localparam ScreenW = 640;
-    localparam initOffset = 40;
+         output wire [6:0] Obs1_H, 
+         output reg [10:0] X_1);
+ 
+    localparam ScreenW = 10'd640;
+    localparam initOffset = 6'd40;
 
     wire Obs1_inGrey;
     wire Obs1_inWhite;
 
-    reg [3:0] Obstacle1_SEL;
+    wire [3:0] Obstacle1_SEL;
 
     wire X1_Released;	/* These are random pulses */
     //wire X2_Released;	/* which generates a random */
     //wire X3_Released;	/* tick in order */
 
-    reg signed [10:0] X_1;
-
     wire X1_inRange;
 
     assign X1_inRange = ((X_1 + Obs1_W) > 0 && X_1 <= ScreenW);
-
+    assign Obstacle1_SEL = 4'b0000;
     ClockDivider #(.velocity(1))
     	tempX1 (.clk(clk),
     			.speed(X1_Released));
@@ -41,17 +40,18 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
         end
         else begin
             case (gameState)
-            
-            2'b10: begin
-                if (X1_inRange || X1_Released) begin
-                    X_1 <= X_1 - 1;
+                2'b00: X_1 <= ScreenW + initOffset;
+                2'b10: begin
+                    if (X1_inRange || X1_Released) begin
+                        X_1 <= X_1 - 1;
+                    end
+                    else begin
+                        X_1 <= ScreenW;    
+                    end
                 end
-                else begin
-                    X_1 <= ScreenW;    
-                end
-            end
-            default:
-                X_1 <= X_1;
+                2'b01: X_1 <= X_1;
+                default:
+                    X_1 <= X_1;
             endcase
 
         end
@@ -66,8 +66,6 @@ module ObstaclesDelegate #(parameter ratio = 1, dx = 5)
         .X(vgaX),
         .Y(vgaY),
         .select(Obstacle1_SEL),
-        .objectWidth(Obs1_W),
-        .objectHeight(Obs1_H),
         .inWhite(Obs1_inWhite),
         .inGrey(Obs1_inGrey));
 

@@ -1,20 +1,21 @@
 module TRexTop(
-	       input wire 	clk,
-	       input wire 	btnR, // Reset button
-	       input wire 	duckButton,
-	       input wire 	jumpButton,
-	       output wire 	Hsync,
-	       output wire 	Vsync,
+	       input wire 	 clk,
+	       input wire 	 btnR, // Reset button
+	       input wire 	 duckButton,
+	       input wire 	 jumpButton,
+           input wire    restart,
+	       output wire 	 Hsync,
+	       output wire 	 Vsync,
 	       output reg [2:0] vgaRed,
 	       output reg [2:0] vgaGreen,
 	       output reg [1:0] vgaBlue,
-               output wire 	led,
-               output wire 	run,
-               output wire 	dead);
+           output wire led,
+          output wire run,
+          output wire dead);
 
    localparam ratio = 1;
-   localparam ScreenH = 480;
-   localparam ScreenW = 640;
+   localparam ScreenH = 9'd480;
+   localparam ScreenW = 10'd640;
 
    wire [9:0] x;       // VGA pixel scan X      
    wire [8:0] y;       // VGA pixel scan Y
@@ -22,19 +23,14 @@ module TRexTop(
 
    wire [10:0] dinoX;
    wire [8:0] dinoY;
-   wire [6:0] DinoH;
-   wire [7:0] DinoW;
 
    wire [10:0] ObsX;
-   wire [8:0]  ObsY;
-   wire [6:0]  ObsH;
-   wire [7:0]  ObsW;
    
    wire  pixel_clk;     // 25Mhz pixel scan clock rate
    wire  animateClock;  // controls the animation of dino's foot step, and bird wings
    wire  ScoreClock;    // Speed of Score coutner (1s = 10 points)
    wire  Frame_Clk;     // 60 FPS
-	 wire  moveClk;
+	wire  moveClk;
 
    wire  rst;
    wire  jump;
@@ -45,7 +41,7 @@ module TRexTop(
    assign GroundY = ScreenH - (ScreenH >> 2);   // Ground Y coordinate assignment
    // 640 - 160 = 480 --> Bottom 25 %
 
-
+   wire [10:0] difficulty = 11'd500; 
    // Begin of clock divider.
    // Output: pixel_clk ==> 25MHz Clock
    // wire 			 pixel_clk;
@@ -66,7 +62,7 @@ module TRexTop(
       FPSClk (.clk(clk),
                  .speed(Frame_Clk));
 					  
-	ClockDivider #(.velocity(400))
+	ClockDivider #(.velocity(500))
 		MoveClk (.clk(clk),
 				   .speed(moveClk));
 	
@@ -113,12 +109,27 @@ module TRexTop(
                                      |          |
                                      |_!Collide_|
    */ 
+   reg         collided;
+   wire        dino_inWhite;
+   wire        dino_inGrey;
+   wire obstacle_inWhite;
+   wire obstacle_inGrey;
+   
+   always @(posedge clk) begin
+      if (rst)
+        collided <= 0;
+      else
+        collided <= dino_inGrey & obstacle_inGrey/*(dinoX + 88 >= ObsX)&&(dinoY - 94 <= GroundY)&&(dinoY >= GroundY - 70)*/;
+   end
+   assign led = collided;
+   
    wire [1:0] gameState;	// wire[1] is run;
-
+   
    GameDelegate gameFSM(
           .clk(clk),
           .rst(rst),
           .jump(jump),
+          .restart(restart),
           .collided(collided),
           .state(gameState));
 
@@ -156,8 +167,7 @@ module TRexTop(
                           .inGrey(ScoreBoard_inGrey));
 
       
-   wire        dino_inWhite;
-   wire        dino_inGrey;
+
    
    TRexDelegate #(.ratio(ratio))
       TRD (.rst(rst),
@@ -173,20 +183,22 @@ module TRexTop(
            .inWhite(dino_inWhite));
 
 
-   wire obstacle_inWhite;
-   wire obstacle_inGrey;
+
    
    ObstaclesDelegate #(.ratio(ratio), .dx(dx))
       OD (.clk(clk),
-          .moveClk(moveClk & gameState[1]),
+          .moveClk(moveClk),
           .rst(rst),
           .ObstacleY(GroundY),
           .vgaX(x),
           .vgaY(y),
           .gameState(gameState),
           .inGrey(obstacle_inGrey),
-          .inWhite(obstacle_inWhite));
+          .inWhite(obstacle_inWhite),
+          .X_1(ObsX));
 			 
+   
+   
    /* Color Select */
    wire isGrey;
    wire isWhite;
@@ -222,11 +234,9 @@ module TRexTop(
        vgaBlue <= 2'b00;
      end
    end
+   
+   
 
-   assign led = collided;
    assign run = gameState[1];
    assign dead = gameState[0];
-
-   assign collided = obstacle_inGrey & dino_inGrey;
-   
 endmodule // top_vga

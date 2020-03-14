@@ -17,6 +17,7 @@ module TRexDelegate #(parameter ratio=1)(
     wire [5:0] defaultX;
     assign defaultX = 6'd50;
 
+
     wire	Airborne;
     wire	isDuck;
     wire	isDead;
@@ -33,8 +34,8 @@ module TRexDelegate #(parameter ratio=1)(
    */
    reg signed [6:0] V;
    reg isJumping;
-   localparam g = 2;
-   localparam v_init = 7'd24;
+   localparam g = 1;
+   localparam v_init = 7'd17;
    /* Gravity Module */   
     
     always @(posedge FrameClk or posedge rst) begin

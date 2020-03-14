@@ -13,11 +13,11 @@ module BackGroundDelegate #(parameter ratio = 1, dx = -6'd20)
     wire [3:0]        horizonSEL;   // Multiplexor
     assign horizonSEL1 = 4'b0001;    // 选择画地面
     assign horizonSEL2 = 4'b0000;
-    reg [11:0]        Ground_1_X;
-    reg [11:0]        Ground_2_X;
+    reg signed [11:0]        Ground_1_X;
+    reg signed [11:0]        Ground_2_X;
     wire [5:0]        GroundH;
     
-    localparam GroundW = 12'd1200;
+    localparam GroundW = 11'd1200;
 	 
     wire    Ground_1_inGrey;
     wire    Ground_2_inGrey;
@@ -38,12 +38,12 @@ module BackGroundDelegate #(parameter ratio = 1, dx = -6'd20)
                     Ground_2_X <= GroundW;
                 end
                 2'b10: begin
-                    if (Ground_1_X == (~GroundW + 1)) begin
+                    if (Ground_1_X == -1200) begin
                         Ground_1_X <= GroundW - 1;
                         Ground_2_X <= Ground_2_X - 1;
                     end
 
-                    else if (Ground_2_X == (~GroundW + 1)) begin
+                    else if (Ground_2_X == -1200) begin
                         Ground_2_X <= GroundW - 1;
                         Ground_1_X <= Ground_1_X - 1;
                     end

@@ -17,7 +17,7 @@ module DinoFSM(
       
       else begin
           case (gameState)
-            2'b00: select <= 4'b0000;
+            2'b00: select <= 4'b0011;
             2'b01: select <= 4'b0010;
             2'b10: begin
                 if (Airborne) begin
@@ -31,6 +31,7 @@ module DinoFSM(
                       select <= (isDuck)? 4'b0000:4'b0100;
                 end
             end
+            default: select <= 4'b0011;
           endcase
       end
    end // always @ (posedge clk or posedge rst)

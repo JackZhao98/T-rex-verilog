@@ -2,37 +2,41 @@ module GameDelegate(
 		    input wire clk,
 		    input wire rst,
 			input wire jump,
+            input wire restart,
 			input wire collided,
-		    output reg [1:0] state);
+		    output reg [1:0] state); // what if we use wire ?? 
 
-  localparam InitState = 2'b00;
-  localparam InGameState = 2'b10;
-  localparam DeadState = 2'b01;
+  localparam InitState = 2'b00;   // init 
+  localparam InGameState = 2'b10; // wait for collidie 
+  localparam DeadState = 2'b01;  // after collide 
   
-  always @(posedge clk) begin  
+  always @(posedge clk) begin
+        
 		case (state)
 		InitState: begin
-			if (jump)
-				state = InGameState;
-			else
-				state = InitState;
+			if (jump) /// input 
+				state <= InGameState;
+			else 
+				state <= state;
 		end
 		
 		InGameState: begin
 			if (collided)
-				state = DeadState;
+				state <= DeadState;
+            else if (rst)
+                state <= InitState;
 			else
-				state = InGameState;
+				state <= InGameState;
 		end
 		
 		DeadState: begin
-			if (jump)
-				state = InitState;
+			if (restart || rst)
+				state <= InitState;
 			else
-				state = DeadState;
+				state <= DeadState;
 		end
 		default:
-			state = InitState;
+			state <= InitState;
 		endcase
   end
 
